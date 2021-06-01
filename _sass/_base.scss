@@ -1,6 +1,7 @@
 /* ==========================================================================
    BASE ELEMENTS
    ========================================================================== */
+
 html {
   /* sticky footer fix */
   position: relative;
@@ -14,6 +15,7 @@ body {
   color: $text-color;
   font-family: $global-font-family;
   line-height: 1.5;
+  overflow-y: scroll; // Always show the scrollbar
 
   &.overflow--hidden {
     /* when primary navigation is visible, the content in the background won't scroll */
