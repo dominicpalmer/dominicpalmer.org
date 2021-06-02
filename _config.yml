@@ -96,9 +96,9 @@ analytics:
 author:
   name             : "Dominic Palmer"
   avatar           : "/assets/images/profile.jpg"
-  bio              : "Junior Software Engineer at Applied Systems, currently working on rating engines and backend services. Previously a Statistical Analyst  at First Central, working on insurance pricing optimisation through machine learning."
+  bio              : "Junior Software Engineer at Applied Systems, currently building rating engines and backend services. Previously a Statistical Analyst  at First Central, working on insurance pricing optimisation through machine learning."
   job              : "Applied Systems"
-  education_1      : "Applied<br>Mathematics MSc"
+  education_1      : "Applied Mathematics MSc"
   education_2      : "Mathematics BSc"
   location         : "South East, United Kingdom :gb:" 
   email            : "your.name@email.com"

@@ -65,9 +65,11 @@ body {
 }
 
 .page__title {
-  margin-top: 0;
+  margin-top: 1em;
   margin-bottom: 0;
   line-height: 1;
+  font-size: $type-size-4 !important;
+  font-family: $sans-serif-narrow;
 
   & + .page__meta {
     margin-top: -0.5em;
@@ -76,7 +78,8 @@ body {
 
 .page__lead {
   font-family: $global-font-family;
-  font-size: $type-size-4;
+  font-size: $type-size-5;
+  font-family: $sans-serif-narrow;
   margin: 0; 
 }
 

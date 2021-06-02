@@ -6,13 +6,29 @@
     line-height: 35%;
 }
 
-.splash-btn:hover {
-    color: rgb(216, 184, 157);
+.splash-btn-github:hover {
+    color: rgb(117, 0, 146);
+}
+
+.splash-btn-linkedin:hover {
+    color: #007bb6;
+}
+
+.splash-btn-email:hover {
+    color: rgb(151, 151, 151);
 }
 
 .greedy-nav .visible-links a:before {
     margin-bottom: 1rem;
     background-color: rgb(49, 49, 49) !important;
+}
+
+.sidebar.sticky {
+    overflow-y: hidden !important;
+}
+
+.author__urls li {
+    white-space: initial !important;
 }
 
 @charset "utf-8";

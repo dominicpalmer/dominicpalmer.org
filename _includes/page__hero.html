@@ -23,17 +23,17 @@
 >
   {% if page.header.overlay_color or page.header.overlay_image %}
     <div class="wrapper">
-      <h1 id="page-title" class="page__title" itemprop="headline">
+      <h1 id="page-title" class="page__title" itemprop="headline" style="color: rgb(223, 245, 234);">
         {% if paginator and site.paginate_show_page_num %}
-          {{ site.title }}{% unless paginator.page == 1 %} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}
+          { {{ site.title }}{% unless paginator.page == 1 %} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %} }
         {% else %}
-          {{ page.title | default: site.title | markdownify | remove: "<p>" | remove: "</p>" }}
+          { {{ page.title | default: site.title | markdownify | remove: "<p>" | remove: "</p>" }} }
         {% endif %}
       </h1>
       {% if page.tagline %}
-        <p class="page__lead">{{ page.tagline | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+        <p class="page__lead" style="color: rgb(223, 245, 234);">[ {{ page.tagline | markdownify | remove: "<p>" | remove: "</p>" }}]</p>
       {% elsif page.header.show_overlay_excerpt != false and page.excerpt %}
-        <p class="page__lead">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+        <p class="page__lead" style="color: rgb(223, 245, 234);">[ {{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}]</p>
       {% endif %}
       {% include page__meta.html %}
       {% if page.header.cta_url %}
@@ -43,11 +43,17 @@
         <p style="float: left;">
         {% for action in page.header.actions %}
           {% if action.icon %}
-            <a href="{{ action.url | relative_url }}">
-              <span style="height: fit-content;" class="splash-btn {{ action.icon }}"><span/>
-            </a>            
+          <a href="{{ action.url | relative_url }}">
+            {%if action.label == "GitHub" %}
+              <span style="height: fit-content;" class="splash-btn-github {{ action.icon }}"><span/>
+            {% elsif action.label == "LinkedIn" %}
+              <span style="height: fit-content;" class="splash-btn-linkedin {{ action.icon }}"><span/>
+            {% elsif action.label == "Email" %}
+              <span style="height: fit-content;" class="splash-btn-email {{ action.icon }}"><span/>
+            {% endif %}
+          </a>   
           {% else %}
-            <a href="{{ action.url | relative_url }}" class="btn btn--light-outline btn--small">{{ action.label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a>
+            <a href="{{ action.url | relative_url }}" style="font-family: consolas;" class="btn btn--light-outline btn--small">{{ action.label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a>
           {% endif %}
         {% endfor %}
       {% endif %}

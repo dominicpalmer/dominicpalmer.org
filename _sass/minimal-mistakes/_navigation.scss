@@ -580,3 +580,10 @@
   color: $masthead-black;
 }
 
+.navicon:before {
+  background: $masthead-black !important;
+}
+
+.navicon:after {
+  background: $masthead-black !important;
+}
