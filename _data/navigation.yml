@@ -1,16 +1,14 @@
-# main links links
+# main links
 main:
   - title: "About"
     url: /about/
-
   - title: "Portfolio"
     url: /portfolio/
-
   - title: "CV"
-    url: /cv/
-
+    url: /cv/ 
   - title: "Travel"
-    url: /travel/    
-        
+    url: /travel/
   - title: "Blog"
     url: /blog/
+  - title: "Contact"
+    url: /contact/
