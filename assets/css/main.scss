@@ -23,14 +23,6 @@
     background-color: rgb(49, 49, 49) !important;
 }
 
-.sidebar.sticky {
-    overflow-y: hidden !important;
-}
-
-.author__urls li {
-    white-space: initial !important;
-}
-
 @charset "utf-8";
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
