@@ -588,3 +588,11 @@
 .navicon:after {
   background: $masthead-black !important;
 }
+
+.greedy-nav {
+  z-index: 5;
+}
+
+.greedy-nav__toggle {
+  outline: none !important;
+}

@@ -129,8 +129,8 @@
     border-radius: 50%;
 
     @include breakpoint($large) {
-      padding: 5px;
-      border: 1px solid $border-color;
+      padding: 3px;
+      border: 0.5px solid $border-color;
     }
   }
 }
@@ -182,7 +182,7 @@
   display: table-cell;
   vertical-align: middle;
   font-family: $sans-serif;
-  z-index: 20;
+  z-index: 10;
   cursor: pointer;
 
   li:last-child {
