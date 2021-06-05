@@ -97,10 +97,13 @@ $(function() {
     check();
   });
 
-  $btn.on('click', function() {
+  $btn.on('click', function(ev) {
     $hlinks.toggleClass('hidden');
     $(this).toggleClass('close');
     clearTimeout(timer);
+
+    // Prevent propagation to the site wide nav menu close click event
+    ev.stopPropagation(); 
   });
 
   // $hlinks.on('mouseleave', function() {
@@ -124,4 +127,14 @@ $(function() {
   // if page does not have a logo just check
   } else check();
 
+  // Close the nav menu when clicking elsewhere
+  $('.js').not('.greedy-nav__toggle').on('click', function(ev) {
+    // Prevent propagation to the nav menu button click event
+    ev.stopPropagation(); 
+    var navToggle = document.getElementsByClassName('greedy-nav__toggle')[0];
+    if (navToggle.classList.contains('close')) {
+      $hlinks.addClass('hidden');
+      $btn.removeClass('close');
+    }
+  });
 });

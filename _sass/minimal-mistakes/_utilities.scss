@@ -406,7 +406,7 @@ body:hover .visually-hidden button {
     &:before {
       -webkit-transition: $global-transition;
       transition: $global-transition;
-      pointer-events: auto;
+      pointer-events: none; // All user action when nav menu is opened
     }
   }
 }
