@@ -572,9 +572,11 @@
     }
   }
 
+// Overrides
 .greedy-nav a {
   color: $masthead-black;
   font-family: $monospace !important;
+  outline: none;
 }
 
 .greedy-nav a:hover {
@@ -595,4 +597,12 @@
 
 .greedy-nav__toggle {
   outline: none !important;
+}
+
+.greedy-nav__toggle:hover .navicon {
+  background: $masthead-black !important;
+}
+
+.greedy-nav__toggle:hover.close .navicon {
+    background: transparent !important;
 }

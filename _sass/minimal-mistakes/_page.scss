@@ -65,7 +65,7 @@ body {
 }
 
 .page__title {
-  margin-top: 1em;
+  margin-top: 0.5em;
   margin-bottom: 0;
   line-height: 1;
   font-size: $type-size-4 !important;
@@ -548,9 +548,11 @@ body {
 }
 
 .page__lead {
-  font-family: $monospace;
+  font-family: $monospace; 
+  font-size: $type-size-6;
 }
 
 .page__title {
   font-family: $monospace;
+  font-size: $type-size-3 !important;
 }

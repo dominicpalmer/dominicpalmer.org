@@ -54,7 +54,7 @@
             {% endif %}
           </a>   
           {% else %}
-            <a href="{{ action.url | relative_url }}" style="font-family: Consolas, monospace, -apple-system;" class="btn btn--light-outline btn--small">{{ action.label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a>
+            <a href="{{ action.url | relative_url }}" style="font-family: Consolas, Monaco, Lucida Console, monospace" class="btn btn--light-outline btn--small">{{ action.label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a>
           {% endif %}
         {% endfor %}
       {% endif %}

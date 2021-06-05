@@ -3,6 +3,18 @@
    ========================================================================== */
 
 $(document).ready(function() {
+  // Sticky footer
+  var bumpIt = function() {
+    $("body").css("margin-bottom", $(".page__footer").outerHeight(true));
+  };
+
+  bumpIt();
+  $(window).resize(
+    jQuery.throttle(250, function() {
+      bumpIt();
+    })
+  );
+
   // FitVids init
   $("#main").fitVids();
 
@@ -62,7 +74,7 @@ $(document).ready(function() {
   });
 
   // Gumshoe scroll spy init
-  if($("nav.toc").length > 0) {
+  if ($("nav.toc").length > 0) {
     var spy = new Gumshoe("nav.toc a", {
       // Active classes
       navClass: "active", // applied to the nav list item

@@ -356,3 +356,9 @@ input[type="submit"],
   -webkit-transition: $global-transition;
   transition: $global-transition;
 }
+
+// Overrides
+// Prevent enforcement of the sticky footer
+.layout--single {
+  margin-bottom: 0 !important;
+}
