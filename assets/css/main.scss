@@ -2,10 +2,12 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
+// Site style overrides
 .spacer {
     line-height: 35%;
 }
 
+// Icon colours
 .splash-btn-github:hover {
     color: rgb(225, 103, 255);
 }
@@ -18,9 +20,25 @@
     color: rgb(150, 233, 201);
 }
 
-.greedy-nav .visible-links a:before {
-    margin-bottom: 1rem;
-    background-color: rgb(49, 49, 49) !important;
+// No button outlines
+.btn {
+    outline: none !important;
+}
+
+.author__urls a {
+    outline: none !important;
+}
+
+.page__footer-follow .social-icons a {
+    outline: none !important;
+}
+
+.page__footer a {
+    outline: none !important;
+}
+
+.page__hero--overlay a {
+    outline: none !important;
 }
 
 @charset "utf-8";

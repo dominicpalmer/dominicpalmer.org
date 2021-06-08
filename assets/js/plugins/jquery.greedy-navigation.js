@@ -131,6 +131,7 @@ $(function() {
   $('.js').not('.greedy-nav__toggle').on('click', function(ev) {
     // Prevent propagation to the nav menu button click event
     ev.stopPropagation(); 
+    
     var navToggle = document.getElementsByClassName('greedy-nav__toggle')[0];
     if (navToggle.classList.contains('close')) {
       $hlinks.addClass('hidden');
