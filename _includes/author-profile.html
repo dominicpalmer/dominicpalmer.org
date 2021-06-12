@@ -63,10 +63,10 @@
         {% for link in author.links %}
           {% if link.label and link.url %}
             {% if link.label == "GitHub" %}
-              <li><a href="{{ link.url }}" rel="nofollow noopener noreferrer"><i style="color: rgb(117, 0, 146);" class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i><span class="label">{{ link.label }}</span></a></li>            
+              <li><a href="{{ link.url }}" rel="nofollow noopener noreferrer"><i style="color: rgb(117, 0, 146);" class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i><span class="label">{{ link.label }}</span></a></li>
             {% else %}
               <li><a href="{{ link.url }}" rel="nofollow noopener noreferrer"><i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i><span class="label">{{ link.label }}</span></a></li>
-            {% endif %}  
+            {% endif %}
           {% endif %}
         {% endfor %}
       {% endif %}

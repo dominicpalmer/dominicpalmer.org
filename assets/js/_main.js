@@ -30,7 +30,7 @@ $(document).ready(function() {
   // Profile menu dropdown
   $(".author__urls-wrapper button").on("click", function(ev) {
     // Prevent propagation to the site wide dropdown close click event
-    ev.stopPropagation(); 
+    ev.stopPropagation();
 
     // Set button outline
     var $profileButton = $('.btn--inverse');
@@ -150,8 +150,8 @@ $(document).ready(function() {
   // Close all open dropdowns when clicking elsewhere on the page
   $('.js').on('click', function(ev) {
     // Prevent propagation to existing button click events
-    ev.stopPropagation(); 
-    
+    ev.stopPropagation();
+
     // Nav dropdown close
     var $navButton = $("nav.greedy-nav .greedy-nav__toggle");
     var $navDropdown = $("nav.greedy-nav .hidden-links");

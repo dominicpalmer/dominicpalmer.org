@@ -103,7 +103,7 @@ $(function() {
     clearTimeout(timer);
 
     // Prevent propagation to the site wide dropdown close click event
-    ev.stopPropagation(); 
+    ev.stopPropagation();
   });
 
   // $hlinks.on('mouseleave', function() {
