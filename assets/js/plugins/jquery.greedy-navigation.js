@@ -89,7 +89,15 @@ $(function() {
     $btn.attr("count", numOfItems - numOfVisibleItems);
     if (numOfVisibleItems === numOfItems) {
       $btn.addClass('hidden');
-    } else $btn.removeClass('hidden');
+      $hlinks.addClass('hidden');
+    } else {
+      $btn.removeClass('hidden');
+
+      var navHandle = document.getElementsByClassName('greedy-nav__toggle')[0];
+      if (navHandle.classList.contains('close')) {
+        $hlinks.removeClass('hidden');
+      }
+    }
   }
 
   // Window listeners
