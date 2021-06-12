@@ -27,8 +27,21 @@ $(document).ready(function() {
     stickySideBar();
   });
 
-  // Follow menu drop down
-  $(".author__urls-wrapper button").on("click", function() {
+  // Profile menu dropdown
+  $(".author__urls-wrapper button").on("click", function(ev) {
+    // Prevent propagation to the site wide dropdown close click event
+    ev.stopPropagation(); 
+
+    // Set button outline
+    var $profileButton = $('.btn--inverse');
+    var profileHandle = document.getElementsByClassName("btn--inverse")[0];
+    if (!profileHandle.classList.contains('open')) {
+      $profileButton.attr("style", "border-color: rgb(49, 49, 49);");
+    } else {
+      $profileButton.attr("style", "border-color: none;");
+    }
+
+    // Toggle the dropdown status
     $(".author__urls").toggleClass("is--visible");
     $(".author__urls-wrapper button").toggleClass("open");
   });
@@ -131,6 +144,31 @@ $(document).ready(function() {
       anchor.innerHTML = '<span class=\"sr-only\">Permalink</span><i class=\"fas fa-link\"></i>';
       anchor.title = "Permalink";
       $(this).append(anchor);
+    }
+  });
+
+  // Close all open dropdowns when clicking elsewhere on the page
+  $('.js').on('click', function(ev) {
+    // Prevent propagation to existing button click events
+    ev.stopPropagation(); 
+    
+    // Nav dropdown close
+    var $navButton = $("nav.greedy-nav .greedy-nav__toggle");
+    var $navDropdown = $("nav.greedy-nav .hidden-links");
+    var navHandle = document.getElementsByClassName('greedy-nav__toggle')[0];
+    if (navHandle.classList.contains('close')) {
+      $navButton.removeClass('close');
+      $navDropdown.addClass('hidden');
+    }
+
+    // Profile dropdown close
+    var $profileButton = $('.btn--inverse');
+    var $profileDropdown = $(".author__urls");
+    var profileHandle = document.getElementsByClassName("btn--inverse")[0];
+    if (profileHandle.classList.contains('open')) {
+      $profileButton.removeClass('open');
+      $profileButton.attr("style", "border-color: none;");
+      $profileDropdown.removeClass('is--visible');
     }
   });
 });
