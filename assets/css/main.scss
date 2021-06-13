@@ -46,6 +46,36 @@
     padding-right: 1.5em !important;
 }
 
+// Page hero styling
+.terminal-cursor {
+    position: relative;
+    display: inline-block;
+    font-family: Consolas, Monaco, "Lucida Console", monospace;
+    line-height: 1.3rem;
+    font-size: 20px;
+    color: white;
+}
+
+.terminal-cursor::after {
+    content: "";
+    position: relative;
+    display: inline-block;
+    top: -0.3rem;
+    right: 0;
+    background-color: none transparent;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    vertical-align: top;
+    width: 0.7rem;
+    height: 1.3rem;
+}
+
+.page__hero--overlay:hover .terminal-cursor {
+    -webkit-animation: blink 1.5s step-end infinite;
+    animation: blink 1.5s step-end infinite;
+}
+
 @charset "utf-8";
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
