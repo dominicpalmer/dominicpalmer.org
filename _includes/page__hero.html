@@ -25,9 +25,9 @@
     <div class="wrapper">
       <h1 id="page-title" class="page__title" itemprop="headline" style="color: white;">
         {% if paginator and site.paginate_show_page_num %}
-          {{ site.title }}{% unless paginator.page == 1 %} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}
+          > Dominic Palmer
         {% else %}
-          > Dominic Palmer <div class="terminal-cursor"></div>
+          > Dominic Palmer
         {% endif %}
       </h1>
       {% if page.tagline %}
