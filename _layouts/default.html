@@ -19,9 +19,15 @@
     {% include_cached browser-upgrade.html %}
     {% include_cached masthead.html %}
 
-    <div class="initial-content">
-      {{ content }}
-    </div>
+    {% if page.url == "/" %}
+      <div class="initial-content" style="border-top: none;">
+        {{ content }}
+      </div>
+    {% else %}
+      <div class="initial-content">
+        {{ content }}
+      </div>
+    {% endif %}
 
     {% if site.search == true %}
       <div class="search-content">

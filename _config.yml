@@ -18,14 +18,14 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 locale                   : "en-GB"
 title                    : "Dominic Palmer"
 title_separator          : "|"
-subtitle                 : "Software Engineering, Data Science"
+subtitle                 : "Software Engineer"
 name                     : "Dominic Palmer"
 description              : "Dominic Palmer's personal website"
 url                      : "https://dominicpalmer.org"
 baseurl                  : ""
 repository               : "dominicpalmer/dominicpalmer.org"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "/assets/images/masthead-logo.png"
+logo                     : "/assets/images/favicon/favicon-1.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
