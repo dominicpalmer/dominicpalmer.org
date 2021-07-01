@@ -11,17 +11,18 @@
 .search__toggle {
   margin-left: 1rem;
   margin-right: 1rem;
-  height: $nav-toggle-height;
+  height: $search-toggle-height;
   border: 0;
-  outline: none;
-  color: $primary-color;
+  outline: none !important;
+  color: $search-black;
   background-color: transparent;
   cursor: pointer;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  font-size: 75%;
 
   &:hover {
-    color: mix(#000, $primary-color, 25%);
+
   }
 }
 

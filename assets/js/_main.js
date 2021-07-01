@@ -2,12 +2,12 @@
    jQuery plugin settings and other scripts
    ========================================================================== */
 
-$(document).ready(function() {
+$(document).ready(function () {
   // FitVids init
   $("#main").fitVids();
 
   // Sticky sidebar
-  var stickySideBar = function() {
+  var stickySideBar = function () {
     var show =
       $(".author__urls-wrapper button").length === 0
         ? $(window).width() > 1024 // width should match $large Sass variable
@@ -15,6 +15,8 @@ $(document).ready(function() {
     if (show) {
       // fix
       $(".sidebar").addClass("sticky");
+      $(".author__urls").removeClass("is--visible");
+      $(".author__urls-wrapper button").removeClass("open");
     } else {
       // unfix
       $(".sidebar").removeClass("sticky");
@@ -23,19 +25,19 @@ $(document).ready(function() {
 
   stickySideBar();
 
-  $(window).resize(function() {
+  $(window).resize(function () {
     stickySideBar();
   });
 
   // Profile menu dropdown
-  $(".author__urls-wrapper button").on("click", function(ev) {
+  $(".author__urls-wrapper button").on("click", function (ev) {
     // Prevent propagation to the site wide dropdown close click event
     ev.stopPropagation();
 
     // Set button outline
-    var $profileButton = $('.btn--inverse');
+    var $profileButton = $(".btn--inverse");
     var profileHandle = document.getElementsByClassName("btn--inverse")[0];
-    if (!profileHandle.classList.contains('open')) {
+    if (!profileHandle.classList.contains("open")) {
       $profileButton.attr("style", "border-color: rgb(49, 49, 49);");
     } else {
       $profileButton.attr("style", "border-color: none;");
@@ -47,7 +49,7 @@ $(document).ready(function() {
   });
 
   // Close search screen with Esc key
-  $(document).keyup(function(e) {
+  $(document).keyup(function (e) {
     if (e.keyCode === 27) {
       if ($(".initial-content").hasClass("is--hidden")) {
         $(".search-content").toggleClass("is--visible");
@@ -57,11 +59,11 @@ $(document).ready(function() {
   });
 
   // Search toggle
-  $(".search__toggle").on("click", function() {
+  $(".search__toggle").on("click", function () {
     $(".search-content").toggleClass("is--visible");
     $(".initial-content").toggleClass("is--hidden");
     // set focus on input
-    setTimeout(function() {
+    setTimeout(function () {
       $(".search-content input").focus();
     }, 400);
   });
@@ -71,11 +73,11 @@ $(document).ready(function() {
     offset: 20,
     speed: 400,
     speedAsDuration: true,
-    durationMax: 500
+    durationMax: 500,
   });
 
   // Gumshoe scroll spy init
-  if($("nav.toc").length > 0) {
+  if ($("nav.toc").length > 0) {
     var spy = new Gumshoe("nav.toc a", {
       // Active classes
       navClass: "active", // applied to the nav list item
@@ -90,7 +92,7 @@ $(document).ready(function() {
       reflow: true, // if true, listen for reflows
 
       // Event support
-      events: true // if true, emit custom events
+      events: true, // if true, emit custom events
     });
   }
 
@@ -112,63 +114,66 @@ $(document).ready(function() {
     gallery: {
       enabled: true,
       navigateByImgClick: true,
-      preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+      preload: [0, 1], // Will preload 0 - before current, and 1 after the current image
     },
     image: {
-      tError: '<a href="%url%">Image #%curr%</a> could not be loaded.'
+      tError: '<a href="%url%">Image #%curr%</a> could not be loaded.',
     },
     removalDelay: 500, // Delay in milliseconds before popup is removed
     // Class that is added to body when popup is open.
     // make it unique to apply your CSS animations just to this exact popup
     mainClass: "mfp-zoom-in",
     callbacks: {
-      beforeOpen: function() {
+      beforeOpen: function () {
         // just a hack that adds mfp-anim class to markup
         this.st.image.markup = this.st.image.markup.replace(
           "mfp-figure",
           "mfp-figure mfp-with-anim"
         );
-      }
+      },
     },
     closeOnContentClick: true,
-    midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+    midClick: true, // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
   });
 
   // Add anchors for headings
-  $('.page__content').find('h1, h2, h3, h4, h5, h6').each(function() {
-    var id = $(this).attr('id');
-    if (id) {
-      var anchor = document.createElement("a");
-      anchor.className = 'header-link';
-      anchor.href = '#' + id;
-      anchor.innerHTML = '<span class=\"sr-only\">Permalink</span><i class=\"fas fa-link\"></i>';
-      anchor.title = "Permalink";
-      $(this).append(anchor);
-    }
-  });
+  $(".page__content")
+    .find("h1, h2, h3, h4, h5, h6")
+    .each(function () {
+      var id = $(this).attr("id");
+      if (id) {
+        var anchor = document.createElement("a");
+        anchor.className = "header-link";
+        anchor.href = "#" + id;
+        anchor.innerHTML =
+          '<span class="sr-only">Permalink</span><i class="fas fa-link"></i>';
+        anchor.title = "Permalink";
+        $(this).append(anchor);
+      }
+    });
 
   // Close all open dropdowns when clicking elsewhere on the page
-  $('.js').on('click', function(ev) {
+  $(".js").on("click", function (ev) {
     // Prevent propagation to existing button click events
     ev.stopPropagation();
 
     // Nav dropdown close
     var $navButton = $("nav.greedy-nav .greedy-nav__toggle");
     var $navDropdown = $("nav.greedy-nav .hidden-links");
-    var navHandle = document.getElementsByClassName('greedy-nav__toggle')[0];
-    if (navHandle.classList.contains('close')) {
-      $navButton.removeClass('close');
-      $navDropdown.addClass('hidden');
+    var navHandle = document.getElementsByClassName("greedy-nav__toggle")[0];
+    if (navHandle.classList.contains("close")) {
+      $navButton.removeClass("close");
+      $navDropdown.addClass("hidden");
     }
 
     // Profile dropdown close
-    var $profileButton = $('.btn--inverse');
+    var $profileButton = $(".btn--inverse");
     var $profileDropdown = $(".author__urls");
     var profileHandle = document.getElementsByClassName("btn--inverse")[0];
-    if (profileHandle.classList.contains('open')) {
-      $profileButton.removeClass('open');
+    if (profileHandle.classList.contains("open")) {
+      $profileButton.removeClass("open");
       $profileButton.attr("style", "border-color: none;");
-      $profileDropdown.removeClass('is--visible');
+      $profileDropdown.removeClass("is--visible");
     }
   });
 });
