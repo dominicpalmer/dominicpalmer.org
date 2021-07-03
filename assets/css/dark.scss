@@ -1,0 +1,112 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+// Dark theme overrides
+
+// Variables
+$masthead-text: #eaeaea !default;
+$masthead-background: #1d212b !default;
+
+// Content
+.page__hero {
+  &--overlay {
+    margin-bottom: 0.5em !important;
+  }
+}
+
+// Navigation
+// Black masthead
+.greedy-nav {
+  background: $masthead-background !important;
+}
+
+.spacer {
+  background-color: $masthead-background !important;
+}
+
+.masthead {
+  background-color: $masthead-background !important;
+}
+
+// Site logo border
+.site-logo img {
+  border-style: dotted;
+  border-width: 1px;
+  border-color: $masthead-text;
+}
+
+// Site title and subtitle text
+.greedy-nav a {
+  color: $masthead-text !important;
+}
+
+// White masthead text
+.greedy-nav .visible-links a {
+  color: $masthead-text !important;
+}
+
+// White masthead text on hover
+.masthead__menu-item a:hover {
+  color: $masthead-text !important;
+}
+
+.greedy-nav .visible-links a:hover {
+  color: $masthead-text !important;
+}
+
+// White masthead indicator
+.active-page-item::before {
+    background-color: $masthead-text !important;
+}
+
+// White masthead indicator on hover
+.greedy-nav .visible-links a:hover::before {
+  background-color: $masthead-text !important;
+}
+
+// Search toggle colour
+.search__toggle {
+  color: $masthead-text !important;
+}
+
+// Navicon colors
+.navicon::before, .navicon::after {
+  background: $masthead-text !important;
+}
+
+.navicon {
+  background: $masthead-text !important;
+}
+
+.greedy-nav__toggle:hover .navicon {
+  background: $masthead-text !important;
+}
+
+.greedy-nav__toggle:hover.close .navicon {
+  background: transparent !important;
+}
+
+.greedy-nav__toggle.close .navicon {
+  background: transparent !important;
+}
+
+// Hidden nav menu link
+.greedy-nav .hidden-links a {
+    color: $masthead-text !important;
+}
+
+.greedy-nav .hidden-links a:hover {
+    color: $masthead-text !important;
+    background-color: rgb(157, 157, 157) !important;
+}
+
+// Footer
+.page__footer {
+  background-color: $masthead-background !important;
+}
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.dark_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials

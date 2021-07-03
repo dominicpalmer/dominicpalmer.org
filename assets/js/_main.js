@@ -177,3 +177,19 @@ $(document).ready(function () {
     }
   });
 });
+
+function toggleTheme() {
+  theme_source = document.getElementById("theme_source");
+  theme_source_alt = document.getElementById("theme_source_alt");
+  if (theme_source.getAttribute("rel") == "stylesheet") {
+    theme_source.setAttribute("rel", "stylesheet alternate");
+    theme_source_alt.setAttribute("rel", "stylesheet");
+    sessionStorage.setItem("theme", "dark");
+  } else {
+    theme_source_alt.setAttribute("rel", "stylesheet alternate");
+    theme_source.setAttribute("rel", "stylesheet");
+    sessionStorage.setItem("theme", "light");
+  }
+
+  return false;
+}

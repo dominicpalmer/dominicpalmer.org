@@ -14,7 +14,29 @@
 </script>
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" id="theme_source">
+
+{% if site.dark_skin %}
+  <link rel="stylesheet alternate" href="{{ '/assets/css/dark.css' | relative_url }}" id="theme_source_alt">
+  <script>
+    let theme = sessionStorage.getItem('theme');
+    if (theme === "dark")
+    {
+      sessionStorage.setItem('theme', 'dark');
+      theme_source = document.getElementById('theme_source');
+      theme_source_alt = document.getElementById('theme_source_alt');
+      theme_source.setAttribute('rel', 'stylesheet alternate');
+      theme_source_alt.setAttribute('rel', 'stylesheet');
+    }
+    else
+    {
+      sessionStorage.setItem('theme', 'light');
+    }
+  </script>
+{% else if %}
+
+{% endif %}
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
 
 <!--[if IE]>

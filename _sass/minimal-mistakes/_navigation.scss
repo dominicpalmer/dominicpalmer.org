@@ -584,11 +584,11 @@
 }
 
 .navicon:before {
-  background: $masthead-black !important;
+  background: $masthead-black;
 }
 
 .navicon:after {
-  background: $masthead-black !important;
+  background: $masthead-black;
 }
 
 .greedy-nav {
@@ -597,7 +597,7 @@
 }
 
 .spacer {
-    line-height: 30%;
+  line-height: 30%;
 }
 
 .greedy-nav__toggle {
@@ -605,23 +605,23 @@
 }
 
 .greedy-nav__toggle:hover .navicon {
-  background: $masthead-black !important;
+  background: $masthead-black;
 }
 
 .greedy-nav__toggle:hover.close .navicon {
-    background: transparent !important;
+  background: transparent !important;
 }
 
-.greedy-nav .visible-links a:before {
+.greedy-nav .visible-links a::before {
   margin-bottom: 1rem;
-  background-color: $masthead-black !important;
+  background-color: $masthead-black;
 }
 
 // Active page indicator
 .active-page-item::before {
-    -webkit-transform: scaleX(1) !important;
-    -ms-transform: scaleX(1) !important;
-    transform: scaleX(1) !important;
-    margin-bottom: 1rem !important;
-    background-color: $masthead-black !important;
+  -webkit-transform: scaleX(1) !important;
+  -ms-transform: scaleX(1) !important;
+  transform: scaleX(1) !important;
+  margin-bottom: 1rem !important;
+  background-color: $masthead-black;
 }
