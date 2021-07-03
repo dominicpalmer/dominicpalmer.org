@@ -593,6 +593,11 @@
 
 .greedy-nav {
   z-index: 5;
+  background: $masthead-background;
+}
+
+.spacer {
+    line-height: 30%;
 }
 
 .greedy-nav__toggle {
@@ -609,5 +614,14 @@
 
 .greedy-nav .visible-links a:before {
   margin-bottom: 1rem;
-  background-color: rgb(49, 49, 49) !important;
+  background-color: $masthead-black !important;
+}
+
+// Active page indicator
+.active-page-item::before {
+    -webkit-transform: scaleX(1) !important;
+    -ms-transform: scaleX(1) !important;
+    transform: scaleX(1) !important;
+    margin-bottom: 1rem !important;
+    background-color: $masthead-black !important;
 }

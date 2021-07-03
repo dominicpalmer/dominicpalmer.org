@@ -17,17 +17,11 @@
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
     {% include_cached skip-links.html %}
     {% include_cached browser-upgrade.html %}
-    {% include_cached masthead.html %}
+    {% include_cached masthead.html page_url=page.url %}
 
-    {% if page.url == "/" %}
-      <div class="initial-content" style="border-top: none;">
-        {{ content }}
-      </div>
-    {% else %}
-      <div class="initial-content">
-        {{ content }}
-      </div>
-    {% endif %}
+    <div class="initial-content">
+      {{ content }}
+    </div>
 
     {% if site.search == true %}
       <div class="search-content">

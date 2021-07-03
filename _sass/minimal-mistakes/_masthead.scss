@@ -5,6 +5,7 @@
    .masthead {
     position: relative;
     z-index: 20;
+    background: $masthead-background;
 
     &__inner-wrap {
       @include clearfix;
