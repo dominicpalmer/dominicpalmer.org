@@ -2,17 +2,33 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-// Dark theme overrides
+/* Dark theme overrides */
 
 // Variables
 $masthead-text: #eaeaea !default;
 $masthead-background: #1d212b !default;
+$page-content-divider-color: #393c44 !default;
+$background-color: #252a34 !default;
+$navicon-color: #6a6971 !default;
+
+/* Profile icon colours */
+$work-icon-color: rgb(89, 89, 208) !default;
+$university-icon-color: rgb(182, 182, 182) !default;
+$location-icon-color: rgb(170, 151, 7) !default;
+$github-icon-color: rgb(146, 9, 181) !default;
+$linkedin-icon-color: #00a5f2 !default;
 
 // Content
 .page__hero {
   &--overlay {
     margin-bottom: 0.5em !important;
   }
+}
+
+.initial-content,
+.search-content {
+  border-top: 1px solid $page-content-divider-color !important;
+  background: $background-color !important;
 }
 
 // Navigation
@@ -72,15 +88,15 @@ $masthead-background: #1d212b !default;
 
 // Navicon colors
 .navicon::before, .navicon::after {
-  background: $masthead-text !important;
+  background: $navicon-color !important;
 }
 
 .navicon {
-  background: $masthead-text !important;
+  background: $navicon-color !important;
 }
 
 .greedy-nav__toggle:hover .navicon {
-  background: $masthead-text !important;
+  background: $navicon-color !important;
 }
 
 .greedy-nav__toggle:hover.close .navicon {
@@ -93,17 +109,89 @@ $masthead-background: #1d212b !default;
 
 // Hidden nav menu link
 .greedy-nav .hidden-links a {
-    color: $masthead-text !important;
+  color: $masthead-text !important;
 }
 
 .greedy-nav .hidden-links a:hover {
-    color: $masthead-text !important;
-    background-color: rgb(157, 157, 157) !important;
+  color: $masthead-text !important;
+  background-color: $background-color !important;
+  outline: 1px dashed $masthead-text;
+  outline-offset: -1px !important;
+}
+
+.greedy-nav {
+  .hidden-links {
+    border: 1px solid $page-content-divider-color !important;
+
+    &:before {
+      border-color: $page-content-divider-color transparent !important;
+    }
+
+    li {
+      border-bottom: 1px solid $page-content-divider-color !important;
+      &:last-child {
+        border-bottom: none !important;
+      }
+    }
+  }
 }
 
 // Footer
 .page__footer {
   background-color: $masthead-background !important;
+}
+
+// Footer spacing
+.footer-icon {
+  padding-right: 1.5em !important;
+}
+
+// Sidebar
+.social-icons {
+  .fa-building {
+      color: $work-icon-color !important;
+  }
+
+  .fa-university {
+      color: $university-icon-color !important;
+  }
+
+  .fa-map-marker-alt {
+      color: $location-icon-color !important;
+  }
+
+  .github-icon {
+      color: $github-icon-color !important;
+  }
+}
+
+.author__urls.social-icons {
+  .fa-linkedin {
+    color: $linkedin-icon-color !important;
+  }
+}
+
+.author__urls.is--visible {
+  border: 1px solid $page-content-divider-color !important;
+
+  &:before {
+    border-color: $page-content-divider-color transparent !important;
+  }
+}
+
+.btn--inverse {
+    border-color: $page-content-divider-color !important;
+    background-color: $background-color !important;
+    color: $masthead-text !important;
+    outline: none !important;
+}
+
+.btn--inverse:hover {
+    border-color: $masthead-text !important;
+}
+
+.btn--inverse.open {
+    border-color: $masthead-text !important;
 }
 
 @charset "utf-8";

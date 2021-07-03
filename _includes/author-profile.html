@@ -33,20 +33,20 @@
     <ul class="author__urls social-icons">
       {% if author.job %}
           <li itemprop="job" itemscope itemtype="https://schema.org/Place">
-            <i style="color: rgb(61, 61, 145);" class="fas fa-fw fa-building" aria-hidden="true"></i>
+            <i class="fas fa-fw fa-building" aria-hidden="true"></i>
             Software Engineer I @ <a style="display: inline-block;" href="https://www1.appliedsystems.com/en-us/"><span itemprop="name">{{ author.job }}</span></a>
           </li>
       {% endif %}
       {% if author.education_1 %}
         <li itemprop="job" itemscope itemtype="https://schema.org/Place">
-          <i style="color: rgb(85, 85, 85);" class="fas fa-fw fa-university" aria-hidden="true"></i>
+          <i class="fas fa-fw fa-university" aria-hidden="true"></i>
           <a style="display: inline-block; padding-right: 0;" href="https://www.imperial.ac.uk/">Imperial College London,</a>
           <span itemprop="name">{{ author.education_1 }}</span>
         </li>
       {% endif %}
       {% if author.education_2 %}
         <li itemprop="job" itemscope itemtype="https://schema.org/Place">
-          <i style="color: rgb(85, 85, 85);" class="fas fa-fw fa-university" aria-hidden="true"></i>
+          <i class="fas fa-fw fa-university" aria-hidden="true"></i>
           <a style="display: inline-block; padding-right: 0;" href="https://www.sussex.ac.uk/">University of Sussex,</a>
           <span itemprop="name">{{ author.education_2 }}</span>
         </li>
@@ -54,7 +54,7 @@
       {% if author.location %}
         <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
           <a href="https://www.google.com/maps/search/South+East+UK/@51.3025696,-0.2449583,9.5z">
-            <i style="color: rgb(141, 125, 0);" class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">{{ author.location }}</span>
+            <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">{{ author.location }}</span>
           </a>
         </li>
       {% endif %}
@@ -63,7 +63,7 @@
         {% for link in author.links %}
           {% if link.label and link.url %}
             {% if link.label == "GitHub" %}
-              <li><a href="{{ link.url }}" rel="nofollow noopener noreferrer"><i style="color: rgb(117, 0, 146);" class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i><span class="label">{{ link.label }}</span></a></li>
+              <li><a href="{{ link.url }}" rel="nofollow noopener noreferrer"><i class="github-icon {{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i><span class="label">{{ link.label }}</span></a></li>
             {% else %}
               <li><a href="{{ link.url }}" rel="nofollow noopener noreferrer"><i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i><span class="label">{{ link.label }}</span></a></li>
             {% endif %}

@@ -63,6 +63,7 @@ $light-gray: mix(#fff, $gray, 50%) !default;
 $lighter-gray: mix(#fff, $gray, 90%) !default;
 
 $background-color: #fff !default;
+$offwhite-background-color: rgb(253, 253, 253) !default;
 $code-background-color: #fafafa !default;
 $code-background-color-dark: $light-gray !default;
 $text-color: $dark-gray !default;
@@ -71,6 +72,7 @@ $border-color: $lighter-gray !default;
 $border-color-2: rgb(218, 218, 218) !default;
 $form-background-color: $lighter-gray !default;
 $footer-background-color: $lighter-gray !default;
+$page-content-divider-color: rgb(179, 179, 179) !default;
 
 $primary-color: #6f777d !default;
 $success-color: #3fa63f !default;
@@ -144,6 +146,12 @@ $base0c: #89ddff !default;
 $base0d: #82aaff !default;
 $base0e: #c792ea !default;
 $base0f: #ff5370 !default;
+
+/* Profile icon colours */
+$work-icon-color: #4b4bff !default;
+$university-icon-color: rgb(123, 123, 123) !default;
+$location-icon-color: rgb(172, 152, 0) !default;
+$github-icon-color: rgb(117, 0, 146) !default;
 
 /*
    Breakpoints

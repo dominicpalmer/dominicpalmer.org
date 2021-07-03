@@ -4,75 +4,75 @@
 
 // Site style overrides
 .spacer {
-    line-height: 30%;
+  line-height: 30%;
 }
 
 // Icon colours
 .splash-btn-github:hover {
-    color: rgb(225, 103, 255);
+  color: rgb(225, 103, 255);
 }
 
 .splash-btn-linkedin:hover {
-    color: #00adfd;
+  color: #00adfd;
 }
 
 .splash-btn-email:hover {
-    color: rgb(150, 233, 201);
+  color: rgb(150, 233, 201);
 }
 
 // No button outlines
 .btn {
-    outline: none !important;
+  outline: none !important;
 }
 
 .author__urls a {
-    outline: none !important;
+  outline: none !important;
 }
 
 .page__footer-follow .social-icons a {
-    outline: none !important;
+  outline: none !important;
 }
 
 .page__footer a {
-    outline: none !important;
+  outline: none !important;
 }
 
 .page__hero--overlay {
-    margin-bottom: 0.5em !important;
+  margin-bottom: 0.5em !important;
 }
 
 .page__hero--overlay a {
-    outline: none !important;
+  outline: none !important;
 }
 
 // Footer spacing
 .footer-icon {
-    padding-right: 1.5em !important;
+  padding-right: 1.5em !important;
 }
 
 // Page hero styling
 .terminal-cursor {
-    position: relative;
-    display: inline-block;
-    font-family: Consolas, Monaco, "Lucida Console", monospace;
-    line-height: 1.3rem;
-    font-size: 20px;
-    color: white;
+  position: relative;
+  display: inline-block;
+  font-family: Consolas, Monaco, "Lucida Console", monospace;
+  line-height: 1.3rem;
+  font-size: 20px;
+  color: white;
 }
 
 .terminal-cursor::after {
-    content: "";
-    position: relative;
-    display: inline-block;
-    top: -0.3rem;
-    right: 0;
-    background-color: none transparent;
-    border-style: solid;
-    border-color: white;
-    border-width: 1px;
-    vertical-align: top;
-    width: 0.7rem;
-    height: 1.3rem;
+  content: "";
+  position: relative;
+  display: inline-block;
+  top: -0.3rem;
+  right: 0;
+  background-color: none transparent;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  vertical-align: top;
+  width: 0.7rem;
+  height: 1.3rem;
 }
 
 // .page__hero--overlay:hover .terminal-cursor {
