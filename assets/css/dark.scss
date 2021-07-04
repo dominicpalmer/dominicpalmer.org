@@ -9,7 +9,7 @@ $masthead-text: #eaeaea !default;
 $masthead-background: #1d212b !default;
 $page-content-divider-color: #393c44 !default;
 $background-color: #252a34 !default;
-$navicon-color: #6a6971 !default;
+$navicon-color: $masthead-text !default;
 
 /* Profile icon colours */
 $work-icon-color: rgb(89, 89, 208) !default;
@@ -71,9 +71,14 @@ $linkedin-icon-color: #00a5f2 !default;
   color: $masthead-text !important;
 }
 
-// White masthead indicator
+// White masthead indicator for expanded menu
 .active-page-item::before {
     background-color: $masthead-text !important;
+}
+
+// White page indicator for condensed menu
+.hidden-links .active-page-item {
+  outline: 1px solid $masthead-text !important;
 }
 
 // White masthead indicator on hover
@@ -115,7 +120,7 @@ $linkedin-icon-color: #00a5f2 !default;
 .greedy-nav .hidden-links a:hover {
   color: $masthead-text !important;
   background-color: $background-color !important;
-  outline: 1px dashed $masthead-text;
+  outline: 1px solid $masthead-text !important;
   outline-offset: -1px !important;
 }
 

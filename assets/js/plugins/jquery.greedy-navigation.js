@@ -76,7 +76,8 @@ $(function () {
       /* search */ ($search.length !== 0 ? $search.outerWidth(true) : 0) -
       /* toggle */ (numOfVisibleItems !== breakWidths.length
         ? $btn.outerWidth(true)
-        : 0);
+        : 0) -
+      125;
     requiredSpace = breakWidths[numOfVisibleItems - 1];
 
     // There is not enought space

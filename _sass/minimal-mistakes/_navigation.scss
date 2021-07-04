@@ -282,8 +282,8 @@
       font-size: $type-size-5;
 
       &:hover {
-        color: $masthead-link-color-hover;
-        background: $navicon-link-color-hover;
+        outline: 1px solid $masthead-black;
+        outline-offset: -1px;
       }
     }
 
@@ -617,11 +617,17 @@
   background-color: $masthead-black;
 }
 
-// Active page indicator
+// Active page indicator for expanded menu
 .active-page-item::before {
   -webkit-transform: scaleX(1) !important;
   -ms-transform: scaleX(1) !important;
   transform: scaleX(1) !important;
   margin-bottom: 1rem !important;
   background-color: $masthead-black;
+}
+
+// Active page indicator for condensed menu
+.hidden-links .active-page-item {
+  outline: 1px solid $masthead-black;
+  outline-offset: -1px
 }
