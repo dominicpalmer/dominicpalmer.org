@@ -180,15 +180,15 @@ $(document).ready(function () {
 
 function toggleTheme() {
   theme_source = document.getElementById("theme_source");
-  theme_source_alt = document.getElementById("theme_source_alt");
+  theme_source_2 = document.getElementById("theme_source_2");
   if (theme_source.getAttribute("rel") == "stylesheet") {
+    theme_source_2.setAttribute("rel", "stylesheet");
     theme_source.setAttribute("rel", "stylesheet alternate");
-    theme_source_alt.setAttribute("rel", "stylesheet");
-    sessionStorage.setItem("theme", "dark");
+    localStorage.setItem("theme", "dark");
   } else {
-    theme_source_alt.setAttribute("rel", "stylesheet alternate");
     theme_source.setAttribute("rel", "stylesheet");
-    sessionStorage.setItem("theme", "light");
+    theme_source_2.setAttribute("rel", "stylesheet alternate");
+    localStorage.setItem("theme", "light");
   }
 
   return false;

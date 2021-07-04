@@ -14,27 +14,23 @@
 </script>
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" id="theme_source">
+<link href="{{ '/assets/css/main.css' | relative_url }}" id="theme_source">
 
 {% if site.dark_skin %}
-  <link rel="stylesheet alternate" href="{{ '/assets/css/dark.css' | relative_url }}" id="theme_source_alt">
+  <link href="{{ '/assets/css/dark.css' | relative_url }}" id="theme_source_2">
   <script>
-    let theme = sessionStorage.getItem('theme');
-    if (theme === "dark")
-    {
-      sessionStorage.setItem('theme', 'dark');
-      theme_source = document.getElementById('theme_source');
-      theme_source_alt = document.getElementById('theme_source_alt');
+    let theme = localStorage.getItem('theme');
+    let theme_source = document.getElementById('theme_source');
+    let theme_source_2 = document.getElementById('theme_source_2');
+
+    if (theme === "dark") {
+      theme_source_2.setAttribute('rel', 'stylesheet');
       theme_source.setAttribute('rel', 'stylesheet alternate');
-      theme_source_alt.setAttribute('rel', 'stylesheet');
-    }
-    else
-    {
-      sessionStorage.setItem('theme', 'light');
+    } else {
+      theme_source.setAttribute('rel', 'stylesheet');
+      theme_source_2.setAttribute('rel', 'stylesheet alternate');
     }
   </script>
-{% else if %}
-
 {% endif %}
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
