@@ -14,10 +14,10 @@
 </script>
 
 <!-- For all browsers -->
-<link href="{{ '/assets/css/main.css' | relative_url }}" id="theme_source">
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" id="theme_source">
 
 {% if site.dark_skin %}
-  <link href="{{ '/assets/css/dark.css' | relative_url }}" id="theme_source_2">
+  <link rel="stylesheet" href="{{ '/assets/css/dark.css' | relative_url }}" id="theme_source_2">
   <script>
     let theme = localStorage.getItem('theme');
     let theme_source = document.getElementById('theme_source');
