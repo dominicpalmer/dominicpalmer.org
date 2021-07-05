@@ -2,14 +2,17 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-/* Dark theme overrides */
+/*
+        Dark theme overrides
+*/
 
-// Variables
+/* Variables */
 $masthead-text: #eaeaea !default;
 $masthead-background: #1d212b !default;
 $page-content-divider-color: #393c44 !default;
 $background-color: #252a34 !default;
 $navicon-color: $masthead-text !default;
+$navicon-cross-color: white !default;
 
 /* Profile icon colours */
 $work-icon-color: rgb(89, 89, 208) !default;
@@ -18,7 +21,12 @@ $location-icon-color: rgb(170, 151, 7) !default;
 $github-icon-color: rgb(146, 9, 181) !default;
 $linkedin-icon-color: #00a5f2 !default;
 
-// Content
+/* Page content */
+// Enable the dark scrollbar in browsers that support it
+:root {
+  color-scheme: dark;
+}
+
 .page__hero {
   &--overlay {
     margin-bottom: 0.5em !important;
@@ -27,12 +35,12 @@ $linkedin-icon-color: #00a5f2 !default;
 
 .initial-content,
 .search-content {
-  border-top: 1px solid $page-content-divider-color !important;
+  border-top: 1px solid $masthead-background !important;
   background: $background-color !important;
 }
 
-// Navigation
-// Black masthead
+/* Masthead */
+// Black masthead background
 .greedy-nav {
   background: $masthead-background !important;
 }
@@ -91,6 +99,7 @@ $linkedin-icon-color: #00a5f2 !default;
   color: $masthead-text !important;
 }
 
+/* Navigation */
 // Navicon colors
 .navicon::before, .navicon::after {
   background: $navicon-color !important;
@@ -110,6 +119,14 @@ $linkedin-icon-color: #00a5f2 !default;
 
 .greedy-nav__toggle.close .navicon {
   background: transparent !important;
+}
+
+.greedy-nav__toggle.close .navicon::before {
+  background: $navicon-cross-color !important;
+}
+
+.greedy-nav__toggle.close .navicon::after {
+  background: $navicon-cross-color !important;
 }
 
 // Hidden nav menu link
@@ -141,7 +158,36 @@ $linkedin-icon-color: #00a5f2 !default;
   }
 }
 
-// Footer
+/* Splash page */
+.splash-btn-github:hover {
+  color: $masthead-text;
+
+  &:hover {
+    color: rgb(225, 103, 255) !important;
+  }
+}
+
+.splash-btn-linkedin:hover {
+  color: #00adfd !important;
+}
+
+.splash-btn-email:hover {
+  color: rgb(150, 233, 201) !important;
+}
+
+.page__hero--overlay a {
+  color: $masthead-text !important;
+}
+
+.page__title {
+  color: $masthead-text !important;
+}
+
+.page__lead {
+  color: $masthead-text !important;
+}
+
+/* Footer */
 .page__footer {
   background-color: $masthead-background !important;
 }
@@ -151,7 +197,7 @@ $linkedin-icon-color: #00a5f2 !default;
   padding-right: 1.5em !important;
 }
 
-// Sidebar
+/* Sidebar */
 .social-icons {
   .fa-building {
       color: $work-icon-color !important;
@@ -203,3 +249,77 @@ $linkedin-icon-color: #00a5f2 !default;
 
 @import "minimal-mistakes/skins/{{ site.dark_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 1.25rem;
+  height: 0.75rem;
+  margin-bottom: 0.2rem;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0.25rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 0.75rem;
+  width: 0.75rem;
+  left: 0;
+  bottom: 4px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  //box-shadow: 0 0px 15px #2020203d;
+  background: white;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus {
+  //box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(0.55rem);
+  -ms-transform: translateX(0.55rem);
+  transform: translateX(0.55rem);
+  background: #eaeaea;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

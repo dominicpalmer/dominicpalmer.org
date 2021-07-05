@@ -178,14 +178,15 @@ $(document).ready(function () {
   });
 });
 
-function toggleTheme() {
-  theme_source = document.getElementById("theme_source");
-  theme_source_2 = document.getElementById("theme_source_2");
+function toggleTheme(ev) {
+  slider = document.getElementById("slider");
+
   if (theme_source.getAttribute("rel") == "stylesheet") {
     theme_source_2.setAttribute("rel", "stylesheet");
     theme_source.setAttribute("rel", "stylesheet alternate");
     localStorage.setItem("theme", "dark");
   } else {
+    theme_source_2.setAttribute("rel", "stylesheet");
     theme_source.setAttribute("rel", "stylesheet");
     theme_source_2.setAttribute("rel", "stylesheet alternate");
     localStorage.setItem("theme", "light");

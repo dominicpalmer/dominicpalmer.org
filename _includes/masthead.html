@@ -24,7 +24,10 @@
             {%- endfor -%}
             </ul>
             {% if site.dark_skin %}
-                <button type="button" onclick="toggleTheme()">Th</button>
+                <label id="switch" class="switch">
+                <input type="checkbox" onchange="toggleTheme()" id="slider">
+                <span class="slider round"></span>
+                </label>
             {% endif %}
             {% if site.search == true %}
             <button class="search__toggle" type="button">
@@ -44,3 +47,11 @@
     </div>
   <div class="spacer"><br></div>
 </div>
+
+<script>
+  if (theme === "dark") {
+    slider.checked = true;
+  } else {
+    slider.checked = false;
+  }
+</script>
