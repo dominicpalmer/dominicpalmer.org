@@ -15,6 +15,26 @@
   </head>
 
   <body style="display: none;" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
+
+  <!-- Load in themes after the body to improve responsiveness -->
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" id="theme_source">
+
+  {% if site.dark_skin %}
+    <link rel="stylesheet" href="{{ '/assets/css/dark.css' | relative_url }}" id="theme_source_2">
+    <script>
+        let theme_source = document.getElementById('theme_source');
+        let theme_source_2 = document.getElementById('theme_source_2');
+
+        if (theme === "dark") {
+        theme_source_2.setAttribute('rel', 'stylesheet');
+        theme_source.setAttribute('rel', 'stylesheet alternate');
+        } else {
+        theme_source.setAttribute('rel', 'stylesheet');
+        theme_source_2.setAttribute('rel', 'stylesheet alternate');
+        }
+    </script>
+    {% endif %}
+
     {% include_cached skip-links.html %}
     {% include_cached browser-upgrade.html %}
     {% include_cached masthead.html page_url=page.url %}

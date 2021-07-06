@@ -178,9 +178,7 @@ $(document).ready(function () {
   });
 });
 
-function toggleTheme(ev) {
-  slider = document.getElementById("slider");
-
+function toggleTheme() {
   if (theme_source.getAttribute("rel") == "stylesheet") {
     theme_source_2.setAttribute("rel", "stylesheet");
     theme_source.setAttribute("rel", "stylesheet alternate");

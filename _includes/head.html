@@ -11,27 +11,8 @@
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  let theme = localStorage.getItem('theme');
 </script>
-
-<!-- For all browsers -->
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" id="theme_source">
-
-{% if site.dark_skin %}
-  <link rel="stylesheet" href="{{ '/assets/css/dark.css' | relative_url }}" id="theme_source_2">
-  <script>
-    let theme = localStorage.getItem('theme');
-    let theme_source = document.getElementById('theme_source');
-    let theme_source_2 = document.getElementById('theme_source_2');
-
-    if (theme === "dark") {
-      theme_source_2.setAttribute('rel', 'stylesheet');
-      theme_source.setAttribute('rel', 'stylesheet alternate');
-    } else {
-      theme_source.setAttribute('rel', 'stylesheet');
-      theme_source_2.setAttribute('rel', 'stylesheet alternate');
-    }
-  </script>
-{% endif %}
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
 
