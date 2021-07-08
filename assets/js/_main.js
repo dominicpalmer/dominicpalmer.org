@@ -2,6 +2,51 @@
    jQuery plugin settings and other scripts
    ========================================================================== */
 
+$(function () {
+  var $btn = $("nav.greedy-nav .greedy-nav__toggle");
+  var $vlinks = $("nav.greedy-nav .visible-links");
+  var $hlinks = $("nav.greedy-nav .hidden-links");
+  var $logoImg = $("nav.greedy-nav .site-logo img");
+
+  function updateNav() {
+    var winWidth = $(window).width();
+
+    if (winWidth <= 654) {
+      $vlinks.children().prependTo($hlinks);
+      $btn.removeClass("hidden");
+    } else {
+      $hlinks.children().appendTo($vlinks);
+      $btn.addClass("hidden");
+      $hlinks.addClass("hidden");
+    }
+
+    var navHandle = document.getElementsByClassName("greedy-nav__toggle")[0];
+    if (navHandle.classList.contains("close")) {
+      $hlinks.removeClass("hidden");
+    }
+  }
+
+  if ($logoImg.length !== 0) {
+    if (!($logoImg[0].complete || $logoImg[0].naturalWidth !== 0)) {
+      $logoImg.one("load error", updateNav);
+    } else updateNav();
+  } else updateNav();
+
+  $(window).resize(function () {
+    updateNav();
+  });
+
+  var timer;
+  $btn.on("click", function (ev) {
+    $hlinks.toggleClass("hidden");
+    $(this).toggleClass("close");
+    clearTimeout(timer);
+
+    // Prevent propagation to the site wide dropdown close click event
+    ev.stopPropagation();
+  });
+});
+
 $(document).ready(function () {
   // FitVids init
   $("#main").fitVids();
@@ -179,14 +224,14 @@ $(document).ready(function () {
 });
 
 function toggleTheme() {
-  if (theme_source.getAttribute("rel") == "stylesheet") {
-    theme_source_2.setAttribute("rel", "stylesheet");
-    theme_source.setAttribute("rel", "stylesheet alternate");
+  if (light_theme.getAttribute("rel") == "stylesheet") {
+    dark_theme.setAttribute("rel", "stylesheet");
+    light_theme.setAttribute("rel", "stylesheet alternate");
     localStorage.setItem("theme", "dark");
   } else {
-    theme_source_2.setAttribute("rel", "stylesheet");
-    theme_source.setAttribute("rel", "stylesheet");
-    theme_source_2.setAttribute("rel", "stylesheet alternate");
+    dark_theme.setAttribute("rel", "stylesheet");
+    light_theme.setAttribute("rel", "stylesheet");
+    dark_theme.setAttribute("rel", "stylesheet alternate");
     localStorage.setItem("theme", "light");
   }
 

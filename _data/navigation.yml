@@ -2,12 +2,8 @@
 main:
   - title: "About"
     url: /about/
-  - title: "Portfolio"
-    url: /portfolio/
   - title: "CV"
     url: /cv/
-  - title: "Travel"
-    url: /travel/
   - title: "Blog"
     url: /blog/
   - title: "Contact"

@@ -6,7 +6,6 @@
     position: relative;
     z-index: 20;
     background: $masthead-background;
-    display: block !important;
 
     &__inner-wrap {
       @include clearfix;
