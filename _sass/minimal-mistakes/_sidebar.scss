@@ -350,6 +350,10 @@
   background-color: white;
 }
 
+.btn--inverse.open {
+  border-color: rgb(49, 49, 49)
+}
+
 // Prevent word wrap when profile section is condensed
 .author__urls.is--visible {
   li {

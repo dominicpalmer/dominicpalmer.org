@@ -79,15 +79,6 @@ $(document).ready(function () {
     // Prevent propagation to the site wide dropdown close click event
     ev.stopPropagation();
 
-    // Set button outline
-    var $profileButton = $(".btn--inverse");
-    var profileHandle = document.getElementsByClassName("btn--inverse")[0];
-    if (!profileHandle.classList.contains("open")) {
-      $profileButton.attr("style", "border-color: rgb(49, 49, 49);");
-    } else {
-      $profileButton.attr("style", "border-color: none;");
-    }
-
     // Toggle the dropdown status
     $(".author__urls").toggleClass("is--visible");
     $(".author__urls-wrapper button").toggleClass("open");
