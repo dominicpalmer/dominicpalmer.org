@@ -53,13 +53,6 @@ $linkedin-icon-color: #00a5f2 !default;
   background-color: $masthead-background !important;
 }
 
-// Site logo border
-.site-logo img {
-  border-style: dotted;
-  border-width: 1px;
-  border-color: $masthead-text;
-}
-
 // Site title and subtitle text
 .greedy-nav a {
   color: $masthead-text !important;

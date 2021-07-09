@@ -6,7 +6,6 @@
   position: relative;
   z-index: 20;
   background: $masthead-background;
-  display: block !important;
 
   &__inner-wrap {
     @include clearfix;
@@ -49,7 +48,7 @@
   content: url('/assets/images/splash-2.png') url('/assets/images/splash-5.jpg') url('/assets/images/favicon/favicon-1.png');
 }
 
-.site-logo img {
+#logo {
   max-height: 2.5rem;
   margin-left: 0.3rem;
 }

@@ -17,16 +17,16 @@ dark_skin                : "dark"
 
 # Site Settings
 locale                   : "en-GB"
-title                    : "Dominic Palmer"
+title                    : ""
 title_separator          : "|"
-subtitle                 : "Software Engineer"
+subtitle                 : ""
 name                     : "Dominic Palmer"
 description              : "Dominic Palmer's personal website"
 url                      : "https://dominicpalmer.org"
 baseurl                  : ""
 repository               : "dominicpalmer/dominicpalmer.org"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "/assets/images/favicon/favicon-1.png"
+logo                     : #""
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200

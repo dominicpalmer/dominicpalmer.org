@@ -180,7 +180,7 @@
   background: $background-color;
 
   a {
-    display: block;
+    display: inherit;
     margin: 0 1rem;
     color: $masthead-link-color;
     text-decoration: none;

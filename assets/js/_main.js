@@ -3,35 +3,6 @@
    ========================================================================== */
 
 $(function () {
-  var $btn = $("nav.greedy-nav .greedy-nav__toggle");
-  var $vlinks = $("nav.greedy-nav .visible-links");
-  var $hlinks = $("nav.greedy-nav .hidden-links");
-  var $logoImg = $("nav.greedy-nav .site-logo img");
-
-  function updateNav() {
-    var winWidth = $(window).width();
-
-    if (winWidth <= 654) {
-      $vlinks.children().prependTo($hlinks);
-      $btn.removeClass("hidden");
-    } else {
-      $hlinks.children().appendTo($vlinks);
-      $btn.addClass("hidden");
-      $hlinks.addClass("hidden");
-    }
-
-    var navHandle = document.getElementsByClassName("greedy-nav__toggle")[0];
-    if (navHandle.classList.contains("close")) {
-      $hlinks.removeClass("hidden");
-    }
-  }
-
-  if ($logoImg.length !== 0) {
-    if (!($logoImg[0].complete || $logoImg[0].naturalWidth !== 0)) {
-      $logoImg.one("load error", updateNav);
-    } else updateNav();
-  } else updateNav();
-
   $(window).resize(function () {
     updateNav();
   });

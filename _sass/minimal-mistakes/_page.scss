@@ -30,6 +30,10 @@ body {
   flex-direction: column;
 }
 
+.masthead {
+  display: block !important;
+}
+
 .initial-content,
 .search-content {
   flex: 1 0 auto;
