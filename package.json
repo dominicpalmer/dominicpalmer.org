@@ -19,7 +19,7 @@
     "jquery": "uglifyjs assets/js/vendor/jquery/jquery-3.5.1.js -c -m -o assets/js/jquery.min.js",
     "main:js": "npm run main",
     "jquery:js": "npm run jquery",
-    "build:js": "npm run main",
+    "build:js": "npm run main && npm run jquery",
     "watch:js": "onchange \"assets/js/**/*.js\" -e \"assets/js/main.min.js\" -- npm run build:js"
   }
 }

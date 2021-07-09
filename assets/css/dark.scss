@@ -53,7 +53,7 @@ $linkedin-icon-color: #00a5f2 !default;
   background-color: $masthead-background !important;
 }
 
-// Site title and subtitle text
+// Masthead links
 .greedy-nav a {
   color: $masthead-text !important;
 }
@@ -90,6 +90,11 @@ $linkedin-icon-color: #00a5f2 !default;
 // Search toggle colour
 .search__toggle {
   color: $masthead-text !important;
+}
+
+// Logo character colour
+.svg-char {
+  fill: $masthead-text !important;
 }
 
 /* Navigation */

@@ -48,11 +48,6 @@
   content: url('/assets/images/splash-2.png') url('/assets/images/splash-5.jpg') url('/assets/images/favicon/favicon-1.png');
 }
 
-#logo {
-  max-height: 2.5rem;
-  margin-left: 0.3rem;
-}
-
 .site-title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -106,10 +101,18 @@
   }
 }
 
+// Overrides
 .masthead__menu-item a {
   color: black !important;
 }
 
 .masthead__menu-item a:hover {
   color: black !important;
+}
+
+.svg-logo {
+  max-height: 2.5rem;
+  margin-left: 6px !important;
+  margin-right: 0 !important;
+  display: inherit !important;
 }
