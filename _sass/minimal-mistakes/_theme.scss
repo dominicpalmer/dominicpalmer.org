@@ -18,7 +18,7 @@
 .slider {
   position: absolute;
   cursor: pointer;
-  top: 0.23rem;
+  top: 0.24rem;
   left: 0;
   right: 0;
   bottom: 0;
@@ -38,8 +38,8 @@
   margin: auto 0;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  box-shadow: 0 0px 15px #2020203d;
-  background: white;
+//   box-shadow: 0 0px 15px #2020203d;
+  background: $masthead-black;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -48,17 +48,12 @@ input:checked + .slider {
   background-color: #2196f3;
 }
 
-input:focus {
-  //box-shadow: 0 0 1px #2196f3;
-}
-
 input:checked + .slider:before {
-  -webkit-transform: translateX(0.55rem);
-  -ms-transform: translateX(0.55rem);
-  transform: translateX(0.55rem);
+  -webkit-transform: translateX(0.52rem);
+  -ms-transform: translateX(0.52rem);
+  transform: translateX(0.52rem);
   background: #eaeaea;
   background-repeat: no-repeat;
-  background-position: center;
 }
 
 /* Rounded sliders */
