@@ -190,12 +190,36 @@ function toggleTheme() {
     dark_theme.setAttribute("rel", "stylesheet");
     light_theme.setAttribute("rel", "stylesheet alternate");
     localStorage.setItem("theme", "dark");
+
+    if (landingSentence) {
+      landingSentence.innerHTML =
+        "If you're reading this in a bright room, try the <a id='landing_theme-link' href='#' onclick='landingToggleTheme();'>light theme</a>.";
+    }
   } else {
     dark_theme.setAttribute("rel", "stylesheet");
     light_theme.setAttribute("rel", "stylesheet");
     dark_theme.setAttribute("rel", "stylesheet alternate");
     localStorage.setItem("theme", "light");
+
+    if (landingSentence) {
+      landingSentence.innerHTML =
+        "If you're reading this in a dark room, try the <a id='landing_theme-link' href='#' onclick='landingToggleTheme();'>dark theme</a>.";
+    }
   }
 
   return false;
+}
+
+function landingToggleTheme() {
+  if (light_theme.getAttribute("rel") == "stylesheet") {
+    slider.checked = true;
+    landingSentence.innerHTML =
+      "If you're reading this in a bright room, try the <a id='landing_theme-link' href='#' onclick='landingToggleTheme();'>light theme</a>.";
+  } else {
+    slider.checked = false;
+    landingSentence.innerHTML =
+      "If you're reading this in a dark room, try the <a id='landing_theme-link' href='#' onclick='landingToggleTheme();'>dark theme</a>.";
+  }
+
+  toggleTheme();
 }

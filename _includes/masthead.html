@@ -38,7 +38,7 @@
             </svg>
             </button>
             {% endif %}
-            <button class="greedy-nav__toggle hidden" type="button">
+            <button id="greedy-nav-button" class="greedy-nav__toggle hidden" type="button">
             <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
             <div class="navicon"></div>
             </button>
@@ -50,7 +50,7 @@
 </div>
 
 <script>
-  let slider = document.getElementById('slider');
+  let slider = document.getElementById("slider");
   if (theme === "dark") {
     slider.checked = true;
   } else {
@@ -74,7 +74,7 @@
       $hlinks.addClass("hidden");
     }
 
-    var navHandle = document.getElementsByClassName("greedy-nav__toggle")[0];
+    var navHandle = document.getElementById("greedy-nav-button");
     if (navHandle.classList.contains("close")) {
       $hlinks.removeClass("hidden");
     }

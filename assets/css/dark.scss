@@ -269,6 +269,11 @@ $linkedin-icon-color: #00a5f2 !default;
   outline: none !important;
 }
 
+// Landing page
+.landing_sentence a {
+  color: white !important;
+}
+
 @charset "utf-8";
 
 @import "minimal-mistakes/skins/{{ site.dark_skin | default: 'default' }}"; // skin

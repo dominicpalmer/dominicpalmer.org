@@ -19,17 +19,19 @@
 
     {% if site.dark_skin %}
       <link rel="stylesheet" href="{{ '/assets/css/dark.css' | relative_url }}" id="dark_theme">
+
+      <!-- Set the theme as soon as possible on page load, with toggling available later via toggleTheme() -->
       <script>
-          let theme = localStorage.getItem('theme');
-          let light_theme = document.getElementById('light_theme');
-          let dark_theme = document.getElementById('dark_theme');
+          let theme = localStorage.getItem("theme");
+          let light_theme = document.getElementById("light_theme");
+          let dark_theme = document.getElementById("dark_theme");
 
           if (theme === "dark") {
-            dark_theme.setAttribute('rel', 'stylesheet');
-            light_theme.setAttribute('rel', 'stylesheet alternate');
+            dark_theme.setAttribute("rel", "stylesheet");
+            light_theme.setAttribute("rel", "stylesheet alternate");
           } else {
-            light_theme.setAttribute('rel', 'stylesheet');
-            dark_theme.setAttribute('rel', 'stylesheet alternate');
+            light_theme.setAttribute("rel", "stylesheet");
+            dark_theme.setAttribute("rel", "stylesheet alternate");
           }
       </script>
     {% endif %}
@@ -41,6 +43,19 @@
     <div class="initial-content">
       {{ content }}
     </div>
+
+    <!-- Set the landing page theme text as soon as possible on page load, with toggling available later via landingToggleTheme() -->
+    <script>
+        let landingSentence = document.getElementById("landing_sentence-three");
+
+        if (landingSentence) {
+          if (theme === "light") {
+            landingSentence.innerHTML = "If you're reading this in a dark room, try the <a id='landing_theme-link' href='#' onclick='landingToggleTheme();'>dark theme</a>.";
+          } else {
+            landingSentence.innerHTML = "If you're reading this in a bright room, try the <a id='landing_theme-link' href='#' onclick='landingToggleTheme();'>light theme</a>.";
+          }
+        }
+    </script>
 
     {% if site.search == true %}
       <div class="search-content">

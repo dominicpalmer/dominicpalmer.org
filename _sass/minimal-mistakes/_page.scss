@@ -188,6 +188,7 @@ body {
     .wrapper {
       padding-left: 1em;
       padding-right: 1em;
+      margin-top: -0.75rem;
 
       @include breakpoint($x-large) {
         max-width: $x-large;
@@ -594,7 +595,28 @@ body {
   margin-right: auto;
   width: auto;
   height: 15rem;
-  margin-top: -11rem;
+  margin-top: -12rem;
   z-index: 1;
   position: relative;
+}
+
+.landing_sentence {
+  font-weight: 1;
+  font-size: $type-size-5;
+  margin-bottom: 1em;
+}
+
+.landing_sentence a {
+  color: rgb(26, 26, 26);
+  font-weight: 500;
+  text-decoration: none;
+  outline: none;
+
+  &::hover {
+    text-decoration: underline;
+  }
+}
+
+#landing_sentence-three {
+  margin-bottom: 2em;
 }

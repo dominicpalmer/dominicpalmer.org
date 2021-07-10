@@ -49,9 +49,9 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(0.52rem);
-  -ms-transform: translateX(0.52rem);
-  transform: translateX(0.52rem);
+  -webkit-transform: translateX(0.54rem);
+  -ms-transform: translateX(0.54rem);
+  transform: translateX(0.54rem);
   background: #eaeaea;
   background-repeat: no-repeat;
 }
