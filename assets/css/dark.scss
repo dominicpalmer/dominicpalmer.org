@@ -272,6 +272,10 @@ $linkedin-icon-color: #00a5f2 !default;
 // Landing page
 .landing_sentence a {
   color: white !important;
+
+  &:hover {
+    color: white !important;
+  }
 }
 
 .terminal-text > .wrap {

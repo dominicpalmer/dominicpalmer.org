@@ -575,6 +575,7 @@
 // Overrides
 .navicon {
   height: 1px !important;
+  margin: 0 0.75rem !important;
 
   &::before, &::after {
     background: $masthead-black;

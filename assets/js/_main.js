@@ -194,7 +194,7 @@ function toggleTheme() {
 
     if (landingSentence) {
       landingSentence.innerHTML =
-        "If you're reading this in a bright room, try the <a id='landing_theme-link' href='#' onclick='landingToggleTheme();'>light theme</a>.";
+        "If you're reading this in a bright room, try the <a id='landing_theme-link' onclick='landingToggleTheme();'>light theme</a>.";
     }
   } else {
     dark_theme.setAttribute("rel", "stylesheet");
@@ -204,7 +204,7 @@ function toggleTheme() {
 
     if (landingSentence) {
       landingSentence.innerHTML =
-        "If you're reading this in a dark room, try the <a id='landing_theme-link' href='#' onclick='landingToggleTheme();'>dark theme</a>.";
+        "If you're reading this in a dark room, try the <a id='landing_theme-link' onclick='landingToggleTheme();'>dark theme</a>.";
     }
   }
 
@@ -216,17 +216,16 @@ function landingToggleTheme() {
   if (light_theme.getAttribute("rel") == "stylesheet") {
     slider.checked = true;
     landingSentence.innerHTML =
-      "If you're reading this in a bright room, try the <a id='landing_theme-link' href='#' onclick='landingToggleTheme();'>light theme</a>.";
+      "If you're reading this in a bright room, try the <a id='landing_theme-link' onclick='landingToggleTheme();'>light theme</a>.";
   } else {
     slider.checked = false;
     landingSentence.innerHTML =
-      "If you're reading this in a dark room, try the <a id='landing_theme-link' href='#' onclick='landingToggleTheme();'>dark theme</a>.";
+      "If you're reading this in a dark room, try the <a id='landing_theme-link' onclick='landingToggleTheme();'>dark theme</a>.";
   }
 
   toggleTheme();
 }
 
-// Writes writes out text content in a terminal style
 var WriteTerminalText = function (element, toWrite, period) {
   this.toWrite = toWrite;
   this.element = element;
@@ -237,6 +236,7 @@ var WriteTerminalText = function (element, toWrite, period) {
   this.isDeleting = false;
 };
 
+// Writes writes out text content in a terminal style
 WriteTerminalText.prototype.tick = function () {
   var fullText = this.toWrite[this.loopCount % this.toWrite.length];
 
