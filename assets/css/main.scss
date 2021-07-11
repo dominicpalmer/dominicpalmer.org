@@ -60,68 +60,21 @@
   color: white;
 }
 
-.terminal-cursor::after {
-  content: "";
-  position: relative;
-  display: inline-block;
-  top: -0.3rem;
-  right: 0;
-  background-color: none transparent;
-  border-style: solid;
-  border-color: white;
-  border-width: 1px;
-  vertical-align: top;
-  width: 0.7rem;
-  height: 1.3rem;
-}
-
-// Page specific overrides
-.landing_inner-wrap {
-  margin-top: 0;
-}
-
-.landing_page-title {
-  font-family: $monospace;
-  font-size: 4rem !important;
-  margin-top: 0.3rem;
-}
-
-#landing_profile-image {
-  border-radius: 50%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: auto;
-  height: 15rem;
-  margin-top: -12rem;
-  z-index: 1;
-  position: relative;
-}
-
-.landing_sentence {
-  font-weight: 1;
-  font-size: $type-size-5;
-  margin-bottom: 1em;
-}
-
-.landing_sentence a {
-  color: rgb(26, 26, 26);
-  font-weight: 500;
-  text-decoration: none;
-  outline: none;
-
-  &::hover {
-    text-decoration: underline;
-  }
-}
-
-#landing_sentence-three {
-  margin-bottom: 2em;
-}
-
-.terminal-text > .wrap {
-  border-right: 0.08em solid rgb(60, 60, 60);
-}
+// Terminal cursor - an alternative landing page effect
+// .terminal-cursor::after {
+//   content: "";
+//   position: relative;
+//   display: inline-block;
+//   top: -0.3rem;
+//   right: 0;
+//   background-color: none transparent;
+//   border-style: solid;
+//   border-color: white;
+//   border-width: 1px;
+//   vertical-align: top;
+//   width: 0.7rem;
+//   height: 1.3rem;
+// }
 
 // .page__hero--overlay:hover .terminal-cursor {
 //     -webkit-animation: blink 1.5s step-end infinite;

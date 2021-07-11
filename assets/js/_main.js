@@ -167,7 +167,7 @@ $(document).ready(function () {
     // Nav dropdown close
     var $navButton = $("nav.greedy-nav .greedy-nav__toggle");
     var $navDropdown = $("nav.greedy-nav .hidden-links");
-    var navHandle = document.getElementsByClassName("greedy-nav__toggle")[0];
+    var navHandle = document.getElementById("greedy-nav-button");
     if (navHandle.classList.contains("close")) {
       $navButton.removeClass("close");
       $navDropdown.addClass("hidden");
@@ -176,8 +176,8 @@ $(document).ready(function () {
     // Profile dropdown close
     var $profileButton = $(".btn--inverse");
     var $profileDropdown = $(".author__urls");
-    var profileHandle = document.getElementsByClassName("btn--inverse")[0];
-    if (profileHandle.classList.contains("open")) {
+    var profileHandle = document.getElementById("profile-button");
+    if (profileHandle && profileHandle.classList.contains("open")) {
       $profileButton.removeClass("open");
       $profileButton.attr("style", "border-color: none;");
       $profileDropdown.removeClass("is--visible");
