@@ -274,6 +274,10 @@ $linkedin-icon-color: #00a5f2 !default;
   color: white !important;
 }
 
+.terminal-text > .wrap {
+  border-right: 0.08em solid $masthead-text !important;
+}
+
 @charset "utf-8";
 
 @import "minimal-mistakes/skins/{{ site.dark_skin | default: 'default' }}"; // skin

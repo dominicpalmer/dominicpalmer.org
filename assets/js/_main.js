@@ -185,6 +185,7 @@ $(document).ready(function () {
   });
 });
 
+// Toggles the site theme
 function toggleTheme() {
   if (light_theme.getAttribute("rel") == "stylesheet") {
     dark_theme.setAttribute("rel", "stylesheet");
@@ -210,6 +211,7 @@ function toggleTheme() {
   return false;
 }
 
+// Toggles the site theme and landing page theme suggestion text
 function landingToggleTheme() {
   if (light_theme.getAttribute("rel") == "stylesheet") {
     slider.checked = true;
@@ -223,3 +225,58 @@ function landingToggleTheme() {
 
   toggleTheme();
 }
+
+// Writes writes out text content in a terminal style
+var WriteTerminalText = function (element, toWrite, period) {
+  this.toWrite = toWrite;
+  this.element = element;
+  this.loopCount = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.text = "";
+  this.tick();
+  this.isDeleting = false;
+};
+
+WriteTerminalText.prototype.tick = function () {
+  var fullText = this.toWrite[this.loopCount % this.toWrite.length];
+
+  if (this.isDeleting) {
+    this.text = fullText.substring(0, this.text.length - 1);
+  } else {
+    this.text = fullText.substring(0, this.text.length + 1);
+  }
+
+  this.element.innerHTML = '<span class="wrap">' + this.text + "</span>";
+
+  var that = this;
+  var delta = 200 - Math.random() * 100;
+
+  if (this.isDeleting) {
+    delta /= 2;
+  }
+
+  if (!this.isDeleting && this.text === fullText) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.text === "") {
+    this.isDeleting = false;
+    this.loopCount++;
+    delta = 500;
+  }
+
+  setTimeout(function () {
+    that.tick();
+  }, delta);
+};
+
+// Write out the splash page landing welcome message on page load
+window.onload = function () {
+  var elements = document.getElementsByClassName("terminal-text");
+  for (var i = 0; i < elements.length; i++) {
+    var toWrite = elements[i].getAttribute("data-words");
+    var period = elements[i].getAttribute("data-period");
+    if (toWrite) {
+      new WriteTerminalText(elements[i], JSON.parse(toWrite), period);
+    }
+  }
+};
