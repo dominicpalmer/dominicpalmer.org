@@ -573,25 +573,40 @@
 }
 
 // Overrides
-.greedy-nav a {
-  color: $masthead-black;
-  font-family: $monospace !important;
-  outline: none;
-  margin: 0 0.75rem;
-}
-
-.greedy-nav a:hover {
-  color: $masthead-black;
-}
-
-.navicon:before {
-  background: $masthead-black;
+.navicon {
   height: 1px !important;
+
+  &::before, &::after {
+    background: $masthead-black;
+    height: 1px !important;
+  }
 }
 
-.navicon:after {
-  background: $masthead-black;
-  height: 1px !important;
+// Greedy navigation
+.greedy-nav {
+  z-index: 5;
+  background: $masthead-background;
+
+  a {
+    color: $masthead-black;
+    font-family: $monospace !important;
+    outline: none;
+    margin: 0 0.75rem;
+
+    &::hover {
+      color: $masthead-black;
+    }
+  }
+
+  .visible-links a::before {
+    margin-bottom: 1rem;
+    background-color: $masthead-black;
+    height: 1px;
+  }
+}
+
+.greedy-nav__toggle {
+  outline: none !important;
 }
 
 .greedy-nav__toggle:hover .navicon {
@@ -599,39 +614,12 @@
   height: 1px !important;
 }
 
-.navicon {
-  height: 1px !important;
-}
-
-.greedy-nav__toggle.close .navicon::before {
-  background: $navicon-cross-color;
-}
-
-.greedy-nav__toggle.close .navicon::after {
-  background: $navicon-cross-color;
-}
-
-.greedy-nav__toggle {
-  outline: none !important;
-}
-
 .greedy-nav__toggle:hover.close .navicon {
   background: transparent !important;
 }
 
-.greedy-nav {
-  z-index: 5;
-  background: $masthead-background;
-}
-
-.spacer {
-  line-height: 30%;
-}
-
-.greedy-nav .visible-links a::before {
-  margin-bottom: 1rem;
-  background-color: $masthead-black;
-  height: 1px;
+.greedy-nav__toggle.close .navicon::before, .navicon::after {
+  background: $navicon-cross-color;
 }
 
 // Active page indicator for expanded menu

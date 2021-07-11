@@ -585,7 +585,7 @@ body {
 .landing_page-title {
   font-family: $monospace;
   font-size: 4rem !important;
-  margin-top: 0.3rem;
+  margin-top: 1rem;
 }
 
 #landing_profile-image {
@@ -604,16 +604,16 @@ body {
   font-weight: 1;
   font-size: $type-size-5;
   margin-bottom: 1em;
-}
 
-.landing_sentence a {
-  color: rgb(26, 26, 26);
-  font-weight: 500;
-  text-decoration: none;
-  outline: none;
+  a {
+    color: rgb(26, 26, 26);
+    font-weight: 500;
+    text-decoration: none;
+    outline: none;
 
-  &::hover {
-    text-decoration: underline;
+    &::hover {
+      text-decoration: underline;
+    }
   }
 }
 

@@ -102,11 +102,7 @@
 }
 
 // Overrides
-.masthead__menu-item a {
-  color: black !important;
-}
-
-.masthead__menu-item a:hover {
+.masthead__menu-item a, a:hover {
   color: black !important;
 }
 
@@ -115,4 +111,8 @@
   margin-left: 6px !important;
   margin-right: 0 !important;
   display: inherit !important;
+}
+
+.spacer {
+  line-height: 30%;
 }
