@@ -31,6 +31,8 @@
 
 .page__footer-follow .social-icons a {
   outline: none !important;
+  padding-right: 0 !important;
+  margin-right: 0.5rem;
 }
 
 .page__footer a {
@@ -48,6 +50,7 @@
 // Footer spacing
 .footer-icon {
   padding-right: 1.5em !important;
+  color: rgb(235, 235, 235) !important;
 }
 
 // Page hero styling

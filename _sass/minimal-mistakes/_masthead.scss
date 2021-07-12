@@ -102,8 +102,12 @@
 }
 
 // Overrides
-.masthead__menu-item a, a:hover {
+.masthead__menu-item a {
   color: black !important;
+
+  &::hover {
+    color: black !important;
+  }
 }
 
 .svg-logo {
