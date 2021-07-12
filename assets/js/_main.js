@@ -7,11 +7,9 @@ $(function () {
     updateNav();
   });
 
-  var timer;
   $btn.on("click", function (ev) {
     $hlinks.toggleClass("hidden");
     $(this).toggleClass("close");
-    clearTimeout(timer);
 
     // Prevent propagation to the site wide dropdown close click event
     ev.stopPropagation();

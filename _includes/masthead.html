@@ -69,12 +69,8 @@
     } else {
       $hlinks.children().appendTo($vlinks);
       $btn.addClass("hidden");
+      $btn.removeClass("close");
       $hlinks.addClass("hidden");
-    }
-
-    var navHandle = document.getElementById("greedy-nav-button");
-    if (navHandle.classList.contains("close")) {
-      $hlinks.removeClass("hidden");
     }
   }
 

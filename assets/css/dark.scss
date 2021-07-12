@@ -253,7 +253,8 @@ $linkedin-icon-color: #00a5f2 !default;
 }
 
 .page__footer-follow .social-icons a {
-  outline: none !important;
+  padding-right: 0;
+  margin-right: 0.5rem;
 }
 
 .page__footer a {
@@ -280,6 +281,16 @@ $linkedin-icon-color: #00a5f2 !default;
 
 .terminal-text > .wrap {
   border-right: 0.08em solid $masthead-text !important;
+}
+
+// Contact page
+#contact-form-button {
+  color: $masthead-text !important;
+  border-color: $page-content-divider-color !important;
+
+  &:hover {
+    border-color: $masthead-text !important;
+  }
 }
 
 @charset "utf-8";
