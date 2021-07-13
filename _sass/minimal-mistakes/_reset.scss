@@ -11,16 +11,19 @@ html {
   background-color: $background-color;
   font-size: 16px;
 
+  // $smallest
   .article-text {
     font-size: 15px !important;
   }
 
   .page__footer-copyright {
     font-size: 10px !important;
+    padding-bottom: 0.5em !important;
   }
 
   .page__footer-follow ul {
     font-size: 34px !important;
+    padding-bottom: 0.25em !important;
   }
 
   .author__bio p {
@@ -36,10 +39,12 @@ html {
 
     .page__footer-copyright {
       font-size: 11px !important;
+      padding-bottom: 0 !important;
     }
 
     .page__footer-follow ul {
       font-size: 37px !important;
+      padding-bottom: 0.15em !important;
     }
 
     .author__bio p {
@@ -56,10 +61,12 @@ html {
 
     .page__footer-copyright {
       font-size: 11px !important;
+      padding-bottom: 0 !important;
     }
 
     .page__footer-follow ul {
       font-size: 37px !important;
+      padding-bottom: 0.15em !important;
     }
 
     .author__bio p {
@@ -76,10 +83,12 @@ html {
 
     .page__footer-copyright {
       font-size: 11px !important;
+      padding-bottom: 0 !important;
     }
 
     .page__footer-follow ul {
       font-size: 37px !important;
+      padding-bottom: 0.15em !important;
     }
 
     .author__bio p {
@@ -96,10 +105,12 @@ html {
 
     .page__footer-copyright {
       font-size: 11px !important;
+      padding-bottom: 0 !important;
     }
 
     .page__footer-follow ul {
       font-size: 37px !important;
+      padding-bottom: 0.15em !important;
     }
 
     .author__bio p {
@@ -116,10 +127,12 @@ html {
 
     .page__footer-copyright {
       font-size: 11px !important;
+      padding-bottom: 0 !important;
     }
 
     .page__footer-follow ul {
       font-size: 37px !important;
+      padding-bottom: 0.15em !important;
     }
 
     .author__bio p {

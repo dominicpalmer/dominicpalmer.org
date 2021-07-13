@@ -261,7 +261,7 @@
     content: "";
     position: absolute;
     top: -11px;
-    left: 83%;
+    left: 85%;
     width: 0;
     border-style: solid;
     border-width: 0 10px 10px;
@@ -278,7 +278,7 @@
     content: "";
     position: absolute;
     top: -10px;
-    left: 83%;
+    left: 85%;
     width: 0;
     border-style: solid;
     border-width: 0 10px 10px;
@@ -354,9 +354,11 @@
   border-color: rgb(49, 49, 49)
 }
 
-// Prevent word wrap when profile section is condensed
 .author__urls.is--visible {
+  font-size: 17px;
+
   li {
+    // Prevent word wrap when profile section is condensed
     white-space: nowrap;
   }
 }

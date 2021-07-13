@@ -188,7 +188,7 @@ body {
     .wrapper {
       padding-left: 1em;
       padding-right: 1em;
-      margin-top: -0.75rem;
+      margin-top: -0.2rem;
 
       @include breakpoint($x-large) {
         max-width: $x-large;
@@ -570,11 +570,17 @@ body {
 .page__title {
   font-family: $monospace;
   font-size: $type-size-3 !important;
+  margin-bottom: 0.25em;
+  margin-top: 0;
 }
 
 .splash-links {
   text-align: left;
   float: none;
+}
+
+.page__inner-wrap {
+  margin-top: 1em !important;
 }
 
 // Page specific overrides

@@ -158,7 +158,7 @@ $(document).ready(function () {
     });
 
   // Close all open dropdowns when clicking elsewhere on the page
-  $(".js").on("click", function (ev) {
+  document.body.addEventListener("click", function (ev) {
     // Prevent propagation to existing button click events
     ev.stopPropagation();
 
