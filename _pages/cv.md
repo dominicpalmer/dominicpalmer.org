@@ -2,9 +2,7 @@
 permalink: /cv/
 title: "CV"
 excerpt: "CV page"
-layout: home
+layout: single
 redirect_from:
   - /cv.html
 ---
-
-CV goes here
