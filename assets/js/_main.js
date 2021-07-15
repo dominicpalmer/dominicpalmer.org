@@ -28,12 +28,12 @@ $(document).ready(function () {
         : !$(".author__urls-wrapper button").is(":visible");
     if (show) {
       // fix
-      $(".sidebar").addClass("sticky");
+      // $(".sidebar").addClass("sticky");
       $(".author__urls").removeClass("is--visible");
       $(".author__urls-wrapper button").removeClass("open");
     } else {
       // unfix
-      $(".sidebar").removeClass("sticky");
+      // $(".sidebar").removeClass("sticky");
     }
   };
 

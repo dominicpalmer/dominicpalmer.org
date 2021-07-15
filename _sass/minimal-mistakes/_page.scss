@@ -561,7 +561,11 @@ body {
   }
 }
 
-// Overrides
+
+/*
+   Overrides
+   ========================================================================== */
+
 .page__lead {
   font-family: $monospace;
   font-size: $type-size-6;
@@ -583,7 +587,7 @@ body {
   margin-top: 1em !important;
 }
 
-// Page specific overrides
+// Landing page
 .landing_inner-wrap {
   margin-top: 0;
 }
@@ -633,4 +637,14 @@ body {
 
 #landing_theme-link {
   cursor: pointer;
+}
+
+// Contact page
+#contact-email-link {
+  outline: none;
+  color: black;
+}
+
+#contact-form {
+  border-radius: 0.3rem;
 }
