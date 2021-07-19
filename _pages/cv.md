@@ -6,3 +6,5 @@ layout: single
 redirect_from:
   - /cv.html
 ---
+
+<hr>

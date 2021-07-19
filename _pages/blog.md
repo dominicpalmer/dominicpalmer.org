@@ -1,8 +1,22 @@
 ---
+layout: archive
 permalink: /blog/
 title: "Blog"
-excerpt: "Blog page"
-layout: home
+excerpt: "Dominic Palmer's blog posts"
 redirect_from:
   - /blog.html
+author_profile: true
+pagination:
+  enabled: true
+  category: posts
 ---
+
+<hr>
+
+{% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'"  %}
+{% for year in postsByYear %}
+  <h2 id="{{ year.name | slugify }}" class="archive__subtitle">{{ year.name }}</h2>
+  {% for post in year.items %}
+    {% include archive-single.html %}
+  {% endfor %}
+{% endfor %}

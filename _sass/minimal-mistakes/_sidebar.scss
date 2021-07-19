@@ -7,6 +7,8 @@
    ========================================================================== */
 
 .sidebar {
+  margin-top: 1em;
+
   @include clearfix();
   // @include breakpoint(max-width $large) {
   //   /* fix z-index order of follow links */
@@ -40,7 +42,7 @@
   }
 
   > * {
-    margin-top: 1em;
+    margin-top: 0;
     margin-bottom: 0;
   }
 
@@ -86,7 +88,7 @@
       @include clearfix();
       position: -webkit-sticky;
       position: sticky;
-      top: 2em;
+      top: 3em;
       float: right;
     }
   }
@@ -229,6 +231,7 @@
   }
 }
 
+
 .author__urls {
   display: none;
   position: absolute;
@@ -243,6 +246,7 @@
   cursor: default;
 
   &.is--visible {
+    font-size: 17px;
     display: block;
   }
 
@@ -343,8 +347,10 @@
   }
 }
 
-// Overrides
-// Profile button hover
+/*
+   Other
+   ========================================================================== */
+
 .btn--inverse:hover {
   border-color: $masthead-black;
   background-color: white;
@@ -354,11 +360,6 @@
   border-color: rgb(49, 49, 49)
 }
 
-.author__urls.is--visible {
-  font-size: 17px;
-
-  li {
-    // Prevent word wrap when profile section is condensed
-    white-space: nowrap;
-  }
+.author__urls.is--visible li {
+  white-space: nowrap;
 }

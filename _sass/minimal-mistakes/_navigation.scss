@@ -167,7 +167,6 @@
 /*
       Priority plus navigation
       ========================================================================== */
-
 .greedy-nav {
   position: relative;
   display: -webkit-box;
@@ -177,18 +176,23 @@
   -ms-flex-align: center;
   align-items: center;
   min-height: $nav-height;
-  background: $background-color;
+  background: $masthead-background;
+
+  // Overrides
+  z-index: 5;
 
   a {
+    outline: none;
+    margin: 0 0.75rem;
     display: block;
-    margin: 0 1rem;
-    color: $masthead-link-color;
+    color: $masthead-black;
     text-decoration: none;
     -webkit-transition: none;
     transition: none;
+    font-family: $monospace !important;
 
     &:hover {
-      color: $masthead-link-color-hover;
+      color: $masthead-black;
     }
 
     &.site-logo {
@@ -211,7 +215,7 @@
     align-self: center;
     height: $nav-toggle-height;
     border: 0;
-    outline: none;
+    outline: none !important;
     background-color: transparent;
     cursor: pointer;
   }
@@ -242,8 +246,9 @@
         position: absolute;
         left: 0;
         bottom: 0;
-        height: 4px;
-        background: $primary-color;
+        margin-bottom: 1rem;
+        height: 1px;
+        background: $masthead-black;
         width: 100%;
         -webkit-transition: $global-transition;
         transition: $global-transition;
@@ -291,7 +296,7 @@
       content: "";
       position: absolute;
       top: -11px;
-      right: 11px;
+      right: 9%;
       width: 0;
       border-style: solid;
       border-width: 0 10px 10px;
@@ -304,7 +309,7 @@
       content: "";
       position: absolute;
       top: -10px;
-      right: 11px;
+      right: 9%;
       width: 0;
       border-style: solid;
       border-width: 0 10px 10px;
@@ -509,20 +514,19 @@
   background-color: $background-color;
   border: 1px solid $border-color;
   border-radius: $border-radius;
-  -webkit-box-shadow: $box-shadow;
-  box-shadow: $box-shadow;
 
   .nav__title {
-    color: #fff;
-    font-size: $type-size-6;
-    background: $primary-color;
+    color: white;
+    font-size: $type-size-5;
+    background: $masthead-black;
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
   }
 
   // Scrollspy marks toc items as .active when they are in focus
   .active a {
-    @include yiq-contrasted($active-color);
+    outline-offset: -0px;
+    outline: 1px solid $masthead-black;
   }
 }
 
@@ -531,17 +535,12 @@
   padding: 0;
   width: 100%;
   list-style: none;
-  font-size: $type-size-6;
-
-  @include breakpoint($large) {
-    font-size: $type-size-7;
-  }
+  font-size: $type-size-5;
 
   a {
     display: block;
     padding: 0.25rem 0.75rem;
-    color: $muted-text-color;
-    font-weight: bold;
+    color: $text-color;
     line-height: 1.5;
     border-bottom: 1px solid $border-color;
 
@@ -572,7 +571,9 @@
   }
 }
 
-// Overrides
+/*
+  Overrides
+*/
 .navicon {
   height: 1px !important;
   margin: 0 0.75rem !important;
@@ -581,33 +582,6 @@
     background: $masthead-black;
     height: 1px !important;
   }
-}
-
-// Greedy navigation
-.greedy-nav {
-  z-index: 5;
-  background: $masthead-background;
-
-  a {
-    color: $masthead-black;
-    font-family: $monospace !important;
-    outline: none;
-    margin: 0 0.75rem;
-
-    &::hover {
-      color: $masthead-black;
-    }
-  }
-
-  .visible-links a::before {
-    margin-bottom: 1rem;
-    background-color: $masthead-black;
-    height: 1px;
-  }
-}
-
-.greedy-nav__toggle {
-  outline: none !important;
 }
 
 .greedy-nav__toggle:hover .navicon {
@@ -623,7 +597,6 @@
   background: $navicon-cross-color;
 }
 
-// Active page indicator for expanded menu
 .active-page-item::before {
   -webkit-transform: scaleX(1) !important;
   -ms-transform: scaleX(1) !important;
@@ -632,7 +605,6 @@
   background-color: $masthead-black;
 }
 
-// Active page indicator for condensed menu
 .hidden-links .active-page-item {
   outline: 1px solid $masthead-black;
   outline-offset: -1px

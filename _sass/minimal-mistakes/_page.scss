@@ -254,6 +254,7 @@ body {
 
 .page__share {
   margin-top: 2em;
+  margin-bottom: 3rem;
   padding-top: 1em;
   border-top: 1px solid $border-color;
 
@@ -272,9 +273,8 @@ body {
 }
 
 .page__share-title {
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
   font-size: $type-size-6;
-  text-transform: uppercase;
 }
 
 /*
@@ -283,9 +283,10 @@ body {
 
 .page__meta {
   margin-top: 2em;
+  margin-bottom: 0.75em;
   color: $muted-text-color;
   font-family: $sans-serif;
-  font-size: $type-size-6;
+  font-size: $type-size-8;
 
   p {
     margin: 0;
@@ -333,7 +334,7 @@ body {
 
   &:hover {
     text-decoration: none;
-    color: $link-color-hover;
+    border-color: $masthead-black;
   }
 }
 
@@ -566,6 +567,9 @@ body {
    Overrides
    ========================================================================== */
 
+/*
+  Page
+*/
 .page__lead {
   font-family: $monospace;
   font-size: $type-size-6;
@@ -578,16 +582,18 @@ body {
   margin-top: 0;
 }
 
+.page__inner-wrap {
+  margin-top: 1em !important;
+}
+
+/*
+  Splash page
+*/
 .splash-links {
   text-align: left;
   float: none;
 }
 
-.page__inner-wrap {
-  margin-top: 1em !important;
-}
-
-// Landing page
 .landing_inner-wrap {
   margin-top: 0;
 }
@@ -616,7 +622,7 @@ body {
   margin-bottom: 1em;
 
   a {
-    color: rgb(26, 26, 26);
+    color: $landing-sentence-link-color;
     font-weight: 500;
     text-decoration: none;
     outline: none;
@@ -632,19 +638,67 @@ body {
 }
 
 .terminal-text > .wrap {
-  border-right: 0.08em solid rgb(60, 60, 60);
+  border-right: 0.08em solid $terminal-text-color;
 }
 
 #landing_theme-link {
   cursor: pointer;
 }
 
-// Contact page
-#contact-email-link {
-  outline: none;
-  color: black;
+/*
+  About page
+*/
+.skilltag {
+  padding: 0.3rem;
+  margin-bottom: 0.25rem;
+  color: $dark-gray;
+  background-color: $light-form-background-color;
+  display: inline-block;
+  border-radius: 0.25rem;
 }
 
+/*
+  Contact page
+*/
 #contact-form {
+  background-color: $light-form-background-color;
   border-radius: 0.3rem;
+}
+
+#contact-form-button {
+  color: $dark-gray;
+  background: none;
+  border: 1px solid $light-gray;
+  border-radius: 0.25rem;
+  padding: 0.25em 0.5em;
+
+  &:hover {
+    border-color: black;
+  }
+}
+
+/*
+  Articles
+*/
+.article-text-link {
+  color: $article-text-link-color;
+  text-decoration: none;
+  outline: none !important;
+
+  &:hover {
+    color: $article-text-link-color;
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: $article-text-link-color;
+
+    &:hover {
+      color: $article-text-link-color;
+    }
+  }
+}
+
+.article-first-header {
+  margin-top: 1.25em;
 }

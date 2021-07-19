@@ -14,10 +14,19 @@
             <ul class="visible-links">
             {%- for link in site.data.navigation.main -%}
                 <li class="masthead__menu-item">
-                {% if link.url == page.url %}
-                    <a class="active-page-item" href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+                {% assign menu_routes = "/,/about/,/cv/,/blog/,/contact/" | split:"," %}
+                {% if menu_routes contains page.url %}
+                  {% if link.url == page.url %}
+                      <a class="active-page-item" href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+                  {% else %}
+                      <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+                  {% endif %}
                 {% else %}
-                    <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+                  {% if link.url == "/blog/" %}
+                      <a class="active-page-item" href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+                  {% else %}
+                      <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+                  {% endif %}
                 {% endif %}
                 </li>
             {%- endfor -%}

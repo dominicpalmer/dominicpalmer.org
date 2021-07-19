@@ -3,10 +3,15 @@
 ---
 
 /*
-        Dark theme overrides
+
+  Dark theme: all styling here overrides the default light theme. Only element styling that changes during load
+  needs to be included here - everything else stays as is.
+
 */
 
-/* Variables */
+/*
+  Variables
+*/
 $masthead-text: #eaeaea !default;
 $masthead-background: #1d212b !default;
 $page-content-divider-color: #393c44 !default;
@@ -14,97 +19,95 @@ $background-color: #252a34 !default;
 $navicon-color: $masthead-text !default;
 $navicon-cross-color: white !default;
 
-/* Profile icon colours */
 $work-icon-color: rgb(89, 89, 208) !default;
 $university-icon-color: rgb(182, 182, 182) !default;
 $location-icon-color: rgb(170, 151, 7) !default;
 $github-icon-color: rgb(146, 9, 181) !default;
 $linkedin-icon-color: #00a5f2 !default;
 
-/* Page content */
-// Enable the dark scrollbar in browsers that support it
+$article-text-link-color:  #78a0df !default;
+$skilltag-background-color: #2f4c6a !default;
+
+/*
+  Page
+*/
 :root {
   color-scheme: dark;
 }
 
-.page__hero {
-  &--overlay {
-    margin-bottom: 0.5em !important;
-  }
-}
-
-.initial-content,
-.search-content {
+.initial-content, .search-content {
   border-top: 1px solid $masthead-background !important;
   background: $background-color !important;
 }
 
-/* Masthead */
-// Black masthead background
-.greedy-nav {
-  background: $masthead-background !important;
+.btn {
+  outline: none !important;
 }
 
-.spacer {
-  background-color: $masthead-background !important;
+/*
+  Masthead
+*/
+.greedy-nav {
+  background: $masthead-background !important;
 }
 
 .masthead {
   background-color: $masthead-background !important;
 }
 
-// Masthead links
-.greedy-nav a {
-  color: $masthead-text !important;
-}
-
-// White masthead text
-.greedy-nav .visible-links a {
-  color: $masthead-text !important;
-}
-
-// White masthead text on hover
 .masthead__menu-item a:hover {
   color: $masthead-text !important;
 }
 
-.greedy-nav .visible-links a:hover {
-  color: $masthead-text !important;
+.spacer {
+  background-color: $masthead-background !important;
 }
 
-// White masthead indicator for expanded menu
+/*
+  Navigation
+*/
+.greedy-nav {
+  a {
+    color: $masthead-text !important;
+  }
+
+  .visible-links {
+    a {
+      color: $masthead-text !important;
+
+      &:hover {
+        color: $masthead-text !important;
+      }
+    }
+  }
+}
+
 .active-page-item::before {
-    background-color: $masthead-text !important;
+  background-color: $masthead-text !important;
 }
 
-// White page indicator for condensed menu
 .hidden-links .active-page-item {
   outline: 1px solid $masthead-text !important;
 }
 
-// White masthead indicator on hover
 .greedy-nav .visible-links a:hover::before {
   background-color: $masthead-text !important;
 }
 
-// Search toggle colour
 .search__toggle {
   color: $masthead-text !important;
 }
 
-// Logo character colour
 .svg-char {
   fill: $masthead-text !important;
 }
 
-/* Navigation */
-// Navicon colors
-.navicon::before, .navicon::after {
-  background: $navicon-color !important;
-}
-
 .navicon {
   background: $navicon-color !important;
+
+  &::before, &::after {
+    background: $navicon-color !important;
+  }
 }
 
 .greedy-nav__toggle:hover .navicon {
@@ -127,18 +130,6 @@ $linkedin-icon-color: #00a5f2 !default;
   background: $navicon-cross-color !important;
 }
 
-// Hidden nav menu link
-.greedy-nav .hidden-links a {
-  color: $masthead-text !important;
-}
-
-.greedy-nav .hidden-links a:hover {
-  color: $masthead-text !important;
-  background-color: $background-color !important;
-  outline: 1px solid $masthead-text !important;
-  outline-offset: -1px !important;
-}
-
 .greedy-nav {
   .hidden-links {
     border: 1px solid $page-content-divider-color !important;
@@ -149,14 +140,39 @@ $linkedin-icon-color: #00a5f2 !default;
 
     li {
       border-bottom: 1px solid $page-content-divider-color !important;
+
       &:last-child {
         border-bottom: none !important;
+      }
+    }
+
+    a {
+      color: $masthead-text !important;
+
+      &:hover {
+        color: $masthead-text !important;
+        background-color: $background-color !important;
+        outline: 1px solid $masthead-text !important;
+        outline-offset: -1px !important;
       }
     }
   }
 }
 
-/* Splash page */
+.toc {
+  .nav__title {
+    color: $masthead-text !important;
+    background: $masthead-background !important;
+  }
+
+  .active a {
+    outline: 1px solid $masthead-text !important;
+  }
+}
+
+/*
+  Splash page
+*/
 .splash-btn-github:hover {
   color: $masthead-text;
 
@@ -173,29 +189,49 @@ $linkedin-icon-color: #00a5f2 !default;
   color: rgb(150, 233, 201) !important;
 }
 
-.page__hero--overlay a {
+.page__hero {
+  &--overlay {
+    margin-bottom: 0.5em !important;
+  }
+}
+
+.page__hero--overlay {
+  margin-bottom: 0.5em !important;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/assets/images/splash-5.jpg') !important;
+
+  a {
+    outline: none !important;
+    color: $masthead-text !important;
+  }
+}
+
+.page__title, .page__lead {
   color: $masthead-text !important;
 }
 
-.page__title {
-  color: $masthead-text !important;
-}
-
-.page__lead {
-  color: $masthead-text !important;
-}
-
-/* Footer */
+/*
+  Footer
+*/
 .page__footer {
   background-color: $masthead-background !important;
+
+  a {
+    outline: none !important;
+  }
 }
 
-// Footer spacing
+.page__footer-follow .social-icons a {
+  padding-right: 0;
+  margin-right: 0.5rem;
+}
+
 .footer-icon {
   padding-right: 1.5em !important;
 }
 
-/* Sidebar */
+/*
+  Sidebar
+*/
 .social-icons {
   .fa-building {
       color: $work-icon-color !important;
@@ -228,62 +264,58 @@ $linkedin-icon-color: #00a5f2 !default;
   }
 }
 
-.btn--inverse {
-    border-color: $page-content-divider-color !important;
-    background-color: $background-color !important;
-    color: $masthead-text !important;
-    outline: none !important;
-}
-
-.btn--inverse:hover {
-    border-color: $masthead-text !important;
-}
-
-.btn--inverse.open {
-    border-color: $masthead-text !important;
-}
-
-// No button outlines
-.btn {
-  outline: none !important;
-}
-
 .author__urls a {
   outline: none !important;
 }
 
-.page__footer-follow .social-icons a {
-  padding-right: 0;
-  margin-right: 0.5rem;
-}
-
-.page__footer a {
+.btn--inverse {
+  border-color: $page-content-divider-color !important;
+  background-color: $background-color !important;
+  color: $masthead-text !important;
   outline: none !important;
-}
-
-.page__hero--overlay {
-  margin-bottom: 0.5em !important;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/assets/images/splash-5.jpg') !important;
-}
-
-.page__hero--overlay a {
-  outline: none !important;
-}
-
-// Landing page
-.landing_sentence a {
-  color: white !important;
 
   &:hover {
-    color: white !important;
+    border-color: $masthead-text !important;
   }
+}
+
+.btn--inverse.open {
+  border-color: $masthead-text !important;
+}
+
+/*
+  Landing page
+*/
+.landing_sentence a, a:hover {
+  color: white !important;
 }
 
 .terminal-text > .wrap {
   border-right: 0.08em solid $masthead-text !important;
 }
 
-// Contact page
+/*
+  About page
+*/
+.skilltag {
+  color: $masthead-text !important;
+  background-color: $skilltag-background-color !important;
+}
+
+/*
+  Blog page
+*/
+.archive__subtitle {
+  color: $masthead-text !important;
+}
+
+/*
+  Contact page
+*/
+#contact-form {
+  background-color: $masthead-background !important;
+}
+
 #contact-form-button {
   color: $masthead-text !important;
   border-color: $page-content-divider-color !important;
@@ -293,8 +325,15 @@ $linkedin-icon-color: #00a5f2 !default;
   }
 }
 
-#contact-email-link {
-  color: white !important;
+/*
+  Articles
+*/
+.article-text-link {
+  color: $article-text-link-color !important;
+
+  &:hover {
+    color: $article-text-link-color !important;
+  }
 }
 
 @charset "utf-8";

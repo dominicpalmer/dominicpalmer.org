@@ -56,7 +56,6 @@
   align-self: center;
   font-weight: bold;
   font-size: $type-size-6;
-
   // z-index: 20;
 }
 
@@ -99,20 +98,19 @@
     padding-right: 2em;
     font-weight: 700;
   }
-}
 
-// Overrides
-.masthead__menu-item a {
-  color: black !important;
-
-  &::hover {
+  a {
     color: black !important;
+
+    &::hover {
+      color: black !important;
+    }
   }
 }
 
 .svg-logo {
   max-height: 2.5rem;
-  margin-left: 6px !important;
+  margin-left: 0.25rem !important;
   margin-right: 0 !important;
   display: inherit !important;
 }
