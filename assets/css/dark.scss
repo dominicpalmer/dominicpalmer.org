@@ -363,6 +363,10 @@ $skilltag-background-color: #2f4c6a !default;
   }
 }
 
+.article-text-image-caption, .article-text-image-caption.a {
+  color: $masthead-text !important;
+}
+
 code {
   border: 1px solid $code-block-outline-color !important
 }
