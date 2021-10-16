@@ -15,7 +15,16 @@ toc_sticky: true
 
 <hr>
 
-<h4 id="overview" class="article-header-start">Overview</h4>
+<div class="article-content-start">
+  <p class="article-text">
+    <img class="article-text-image" src="/assets/images/vscode-cpp.png" alt="vscode-cpp-preview">
+    <span class="article-text-image-caption">
+      <a class="article-text-link" href="https://code.visualstudio.com/docs/languages/cpp">Source: The Official VSCode C++ Documentation</a>.
+    </span>
+  </p>
+</div>
+
+<h4 id="overview">Overview</h4>
 <p class="article-text">
   With sufficient time spent on initial setup and configuration, VSCode can work well as a primary editor for C++ projects.
   It might not be as lightweight as Vim, but VSCode's flexible configuration model makes is relatively straightfoward
