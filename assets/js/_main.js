@@ -27,13 +27,8 @@ $(document).ready(function () {
         ? $(window).width() > 1024 // width should match $large Sass variable
         : !$(".author__urls-wrapper button").is(":visible");
     if (show) {
-      // fix
-      // $(".sidebar").addClass("sticky");
       $(".author__urls").removeClass("is--visible");
       $(".author__urls-wrapper button").removeClass("open");
-    } else {
-      // unfix
-      // $(".sidebar").removeClass("sticky");
     }
   };
 
@@ -73,13 +68,13 @@ $(document).ready(function () {
     }, 400);
   });
 
-  // Smooth scrolling
-  var scroll = new SmoothScroll('a[href*="#"]', {
-    offset: 20,
-    speed: 400,
-    speedAsDuration: true,
-    durationMax: 500,
-  });
+  // // Smooth scrolling
+  // var scroll = new SmoothScroll('a[href*="#"]', {
+  //   offset: 20,
+  //   speed: 400,
+  //   speedAsDuration: true,
+  //   durationMax: 500,
+  // });
 
   // Gumshoe scroll spy init
   if ($("nav.toc").length > 0) {

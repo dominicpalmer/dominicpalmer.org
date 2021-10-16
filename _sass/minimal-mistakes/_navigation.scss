@@ -120,20 +120,21 @@
   /* next/previous buttons */
   &--pager {
     display: block;
-    padding: 1em 2em;
+    padding: 0.5em;
     float: left;
     width: 50%;
-    font-family: $sans-serif;
+    font-family: $monospace;
     font-size: $type-size-5;
-    font-weight: bold;
     text-align: center;
     text-decoration: none;
-    color: $muted-text-color;
-    border: 1px solid mix(#000, $border-color, 25%);
+    color: $dark-gray;
+    border: 1px solid $border-color;
     border-radius: $border-radius;
+    transition: none;
 
     &:hover {
-      @include yiq-contrasted($muted-text-color);
+      color: $dark-gray;
+      border: 1px solid $masthead-black;
     }
 
     &:first-child {
@@ -142,7 +143,7 @@
     }
 
     &:last-child {
-      margin-left: -1px;
+      // margin-left: 0;
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
@@ -159,9 +160,13 @@
 .page__meta + .pagination,
 .page__share + .pagination,
 .page__comments + .pagination {
-  margin-top: 2em;
-  padding-top: 2em;
+  margin-top: 1.5em;
+  padding-top: 1.5em;
   border-top: 1px solid $border-color;
+}
+
+.page__share + .pagination {
+  margin-bottom: 1.5em;
 }
 
 /*
@@ -524,9 +529,11 @@
   }
 
   // Scrollspy marks toc items as .active when they are in focus
-  .active a {
-    outline-offset: -0px;
-    outline: 1px solid $masthead-black;
+  @-moz-document url-prefix() {
+    .active a {
+      outline-offset: -0px;
+      outline: 1px solid $masthead-black;
+    }
   }
 }
 

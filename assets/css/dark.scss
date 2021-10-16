@@ -18,6 +18,9 @@ $page-content-divider-color: #393c44 !default;
 $background-color: #252a34 !default;
 $navicon-color: $masthead-text !default;
 $navicon-cross-color: white !default;
+$code-block-outline-color: #333 !default;
+$code-background-colour: #5e5e5e !default;
+$toc-border-colour: #51555d !default;
 
 $work-icon-color: rgb(89, 89, 208) !default;
 $university-icon-color: rgb(182, 182, 182) !default;
@@ -165,8 +168,11 @@ $skilltag-background-color: #2f4c6a !default;
     background: $masthead-background !important;
   }
 
-  .active a {
-    outline: 1px solid $masthead-text !important;
+  @-moz-document url-prefix() {
+    .active a {
+      outline-offset: -0px !important;
+      outline: 1px solid $toc-border-colour !important;
+    }
   }
 }
 
@@ -207,6 +213,27 @@ $skilltag-background-color: #2f4c6a !default;
 
 .page__title, .page__lead {
   color: $masthead-text !important;
+}
+
+.pagination {
+  &--pager {
+    color: $article-text-link-color !important;
+
+    &:hover {
+      border: 1px solid $masthead-text !important;
+      color: $masthead-text !important;
+    }
+
+    &.disabled {
+      color: grey !important;
+    }
+  }
+}
+
+.page__taxonomy-item {
+  &:hover {
+    border: 1px solid $masthead-text !important;
+  }
 }
 
 /*
@@ -333,6 +360,34 @@ $skilltag-background-color: #2f4c6a !default;
 
   &:hover {
     color: $article-text-link-color !important;
+  }
+}
+
+code {
+  border: 1px solid $code-block-outline-color !important
+}
+
+code.article-text {
+  background-color: $code-background-colour !important;
+}
+
+/*
+  CV page
+*/
+.cv-button {
+  color: $masthead-text !important;
+  border-color: $page-content-divider-color !important;
+
+  &:hover {
+    border-color: $masthead-text !important;
+  }
+}
+
+#cv-download-link {
+  color: $masthead-text !important;
+
+  &:hover {
+    color: $masthead-text !important;
   }
 }
 

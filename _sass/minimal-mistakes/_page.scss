@@ -253,9 +253,7 @@ body {
    ========================================================================== */
 
 .page__share {
-  margin-top: 2em;
-  margin-bottom: 3rem;
-  padding-top: 1em;
+  margin-top: 1.5em;
   border-top: 1px solid $border-color;
 
   @include breakpoint(max-width $small) {
@@ -283,7 +281,7 @@ body {
 
 .page__meta {
   margin-top: 2em;
-  margin-bottom: 0.75em;
+  margin-bottom: 0.9em;
   color: $muted-text-color;
   font-family: $sans-serif;
   font-size: $type-size-8;
@@ -586,6 +584,10 @@ body {
   margin-top: 1em !important;
 }
 
+footer.page__meta {
+  margin-bottom: 0em;
+}
+
 /*
   Splash page
 */
@@ -617,7 +619,7 @@ body {
 }
 
 .landing_sentence {
-  font-weight: 1;
+  font-weight: 300;
   font-size: $type-size-5;
   margin-bottom: 1em;
 
@@ -680,6 +682,14 @@ body {
 /*
   Articles
 */
+.article-header-start {
+  margin-top: 1.35em;
+}
+
+.article-content-start {
+  margin-top: 1.95em !important;
+}
+
 .article-text-link {
   color: $article-text-link-color;
   text-decoration: none;
@@ -699,6 +709,68 @@ body {
   }
 }
 
-.article-first-header {
-  margin-top: 1.25em;
+.article-text-image {
+  border-radius: $border-radius;
+}
+
+code {
+  font-size: 0.85em;
+  border-radius: $border-radius;
+}
+
+code.article-text {
+  font-size: 0.85em !important;
+  background: $code-background-colour;
+}
+
+/*
+  CV page
+*/
+#cv-base {
+  display: table;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.cv-control {
+  display: inline-block;
+}
+
+.cv-form {
+  background-color: $background-color;
+  padding-top: 0;
+  margin-bottom: 0.4rem;
+}
+
+.cv-button {
+  display: inline-block;
+  font-size: 1.1em !important;
+  color: $dark-gray;
+  background: none;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  border: 1px solid $light-gray;
+  border-radius: 0.25rem;
+  padding: 0.25em 0.5em;
+  animation: none;
+  transition: none;
+  -webkit-transition: none;
+
+  &:hover {
+    border-color: black;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+#cv-download-link {
+  text-decoration: none;
+  color: $masthead-black;
+
+  &:hover {
+    color: $masthead-black;
+  }
 }
