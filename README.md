@@ -43,13 +43,13 @@ bundle exec jekyll serve
 ## Scripts
 By default, changing structure or styling source files once a local deployment is up and running will trigger a re-generation of the affected resources. Only a page refresh is then needed to see the changes reflected in the browser.
 
-To see changes to scripts reflected in real time, you need to first bundle and minify them. When making a change to anything in **./assets/js**, re-build via:
+To see changes to scripts reflected in real time, you need to first bundle and minify them. After making a change to anything in **./assets/js**, re-build and minify via:
 
 ```bash
 npm run build:js
 ```
 
-To re-bundle and minify everything except JQuery:
+Or to re-build everything except jQuery:
 
 ```bash
 npm run main:js
