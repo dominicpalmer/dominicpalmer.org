@@ -223,6 +223,6 @@ nnoremap &lt;leader&gt;&lt;CR&gt; O&lt;Esc&gt;
   <code class="article-text">.</code> and <code class="article-text">!</code>.<br><br>
 
   If there's one point to take away, it's that diversion from the defaults doesn't infer the desertion of Vim's intended use.
-  Many heretical remaps are in fact logical corrections and extensions of longstanding inconsistencies and missing features,
+  Many heretical remaps are in fact logical corrections and extensions of long-standing inconsistencies and missing features,
   and better yet, most default remaps come with almost no net cost to the editor's core functionality.
 </p>
