@@ -8,7 +8,7 @@ This repo is home to the source of my personal website, <a href="https://www.dom
 You won't find any React components here, but the snappiness and lack of re-rendering when clicking through the site on modern browsers might have some assume otherwise. :tornado:
 
 ## Design
-The site is backed by Jekyll, a static site generator. Although static site generation is often aimed at translation of markdown into HTML, I structured all page content with HTML. Styling is then through SCSS, with a theme switcher I implemented in plain JavaScript.
+The site is backed by Jekyll, a static site generator. Although static site generation is often aimed at translation of markdown into HTML, I structured all page content with HTML from the outset. Styling is then through SCSS, with a theme switcher I implemented in plain JavaScript.
 
 To implement syntax highlighting of code blocks, I made use of an awesome framework called <a href="https://highlightjs.org/">highlight.js</a>. The syntax highlighting colour theme used site-wide is <a href="https://github.com/morhetz/gruvbo">gruvbox</a>.
 
