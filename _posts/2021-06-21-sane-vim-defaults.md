@@ -36,10 +36,10 @@ toc_sticky: true
 <h4 id="reference" class="article-header-start">Reference</h4>
 <p class="article-text">
   All of the remaps below are visible in my public dotfiles repo. For a Vimscript reference, go
-  <a class="article-text-link" href="https://github.com/dominicpalmer/dotfiles/tree/master/nvim_vimscript">here</a> and
+  <a class="article-text-link" href="https://github.com/dominicpalmer/dotfiles/tree/master/nvim">here</a> and
   have a read through <code class="article-text">remaps_common.vim</code> and <code class="article-text">remaps_nvim.vim</code>.
   For those acquainted with Lua configuration in Neovim, go
-  <a class="article-text-link" href="https://github.com/dominicpalmer/dotfiles/blob/master/nvim/lua/common.lua">here</a>
+  <a class="article-text-link" href="https://github.com/dominicpalmer/dotfiles/blob/master/nvim_lua/lua/common.lua">here</a>
   and look for <code class="article-text">M.remaps</code>.
 </p>
 
