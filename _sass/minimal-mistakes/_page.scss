@@ -176,10 +176,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-
-    // Parallax scrolling
-    min-height: 16rem;
-    background-attachment: fixed;
+    min-height: 10rem;
 
     a {
       color: #fff;
@@ -612,8 +609,8 @@ footer.page__meta {
   margin-left: auto;
   margin-right: auto;
   width: auto;
-  height: 15rem;
-  margin-top: -12rem;
+  height: 8rem;
+  margin-top: -5rem;
   z-index: 1;
   position: relative;
 }

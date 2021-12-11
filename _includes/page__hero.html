@@ -23,13 +23,11 @@
 >
   {% if page.header.overlay_color or page.header.overlay_image %}
     <div class="wrapper">
-      <h1 id="page-title" class="page__title" itemprop="headline" style="color: white; text-align: center;">
-        {% if paginator and site.paginate_show_page_num %}
-          Dominic Palmer
-        {% else %}
-          Dominic Palmer
-        {% endif %}
-      </h1>
+      {% if page.no_overlay_title %}
+        <h1 id="page-title" class="page__title" itemprop="headline" style="color: white; text-align: center;">
+            Dominic Palmer
+        </h1>
+      {% endif %}
       {% if page.tagline %}
         <p class="page__lead" style="color: white; text-align: center; max-width: none;">{{ page.tagline | markdownify | remove: "<p>" | remove: "</p>" }}</p>
       {% elsif page.header.show_overlay_excerpt != false and page.excerpt %}
