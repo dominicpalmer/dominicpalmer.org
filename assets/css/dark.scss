@@ -170,8 +170,8 @@ $skilltag-background-color: #2f4c6a !default;
 
   @-moz-document url-prefix() {
     .active a {
-      outline-offset: -0px !important;
-      outline: 1px solid $toc-border-colour !important;
+      outline-offset: 0px !important;
+      outline: 1px solid $masthead-text !important;
     }
   }
 }
