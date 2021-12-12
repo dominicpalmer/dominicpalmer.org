@@ -22,7 +22,7 @@
 
       <!-- Set the theme as soon as possible on page load, with toggling available later via toggleTheme() -->
       <script>
-          let theme = localStorage.getItem("theme");
+          let theme = localStorage.getItem("theme") ?? "light";
           let light_theme = document.getElementById("light_theme");
           let dark_theme = document.getElementById("dark_theme");
 
