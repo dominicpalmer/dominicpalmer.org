@@ -25,6 +25,11 @@
   outline: none !important;
 }
 
+// No emoji box-shadow
+.page__content a:not(.btn):hover img {
+  box-shadow: none !important;
+}
+
 .author__urls a {
   outline: none !important;
 }
