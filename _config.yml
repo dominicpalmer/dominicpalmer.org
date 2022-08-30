@@ -101,8 +101,7 @@ author:
   job              : "Applied Systems"
   education_1      : "Applied Mathematics MSc"
   education_2      : "Mathematics BSc"
-  location         : "South East, UK :gb:"
-  email            : "dominic.palmer@outlook.com"
+  location         : "United Kingdom"
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
@@ -120,10 +119,6 @@ footer:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/dompalmer"
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "dominic.palmer@outlook.com"
-
 
 # Reading Files
 include:

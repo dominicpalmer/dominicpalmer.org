@@ -4,17 +4,13 @@
 
 ## Summary
 
-This repo is home to the source of my personal website, <a href="https://www.dominicpalmer.org">dominicpalmer.org</a>. It's a fork of a Jekyll theme named <a href="https://github.com/mmistakes/minimal-mistakes">Minimal Mistakes</a>, and is hosted with GitHub Pages. My primary design goal was minimalism without compromise on content, plus a strong emphasis on responsiveness.
-
-You won't find any React components here, but the snappiness and lack of re-rendering when clicking through the site on modern browsers might have some assume otherwise. :tornado:
+This repo is home to my personal website, <a href="https://www.dominicpalmer.org">dominicpalmer.org</a>. It's a fork of a Jekyll theme named <a href="https://github.com/mmistakes/minimal-mistakes">Minimal Mistakes</a>, and is hosted with GitHub Pages.
 
 ## Design
 
-The site is backed by Jekyll, a static site generator. Although static site generation is often aimed at translation of markdown into HTML, I structured all page content with HTML from the outset. Styling is then through SCSS, with a theme switcher in plain JavaScript.
+The site is backed by Jekyll, a static site generator. Although static site generation is often aimed at translation of markdown into HTML, I structured page content using HTML from the outset, with SCSS and plain JavaScript for styling and aesthetic features.
 
-To get syntax highlighting of code blocks, I made use of an awesome framework called <a href="https://highlightjs.org/">highlight.js</a>. The highlighting colour theme used site-wide is <a href="https://github.com/morhetz/gruvbo">gruvbox</a>.
-
-I kept rendering time on page load at a minimum through timely population of dynamic content, delayed loading of non-critical scripts, and preloading of images.
+To get syntax highlighting of code blocks, I used an awesome framework called <a href="https://highlightjs.org/">highlight.js</a>. The highlighting colour theme used site-wide is <a href="https://github.com/morhetz/gruvbo">gruvbox</a>.
 
 ## Dependencies
 
@@ -22,7 +18,7 @@ Firstly, you'll need Jekyll's dependencies:
 
 - Ruby, version 2.5.0+
 - RubyGems
-- GCC and Make (i.e, build-essentials)
+- GCC and Make (i.e. `build-essentials`)
 
 Then per Jekyll's <a href="https://jekyllrb.com/docs/">docs</a>, you'll need the Jekyll and Bundler gems:
 
@@ -38,7 +34,7 @@ Clone the repo:
 git clone https://github.com/dominicpalmer/dominicpalmer.org.git
 ```
 
-Then at the repositories root:
+Then at the repository root:
 
 ```bash
 bundle exec jekyll serve

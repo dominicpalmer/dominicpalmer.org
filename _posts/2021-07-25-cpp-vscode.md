@@ -26,36 +26,35 @@ toc_sticky: true
 
 <h4 id="overview">Overview</h4>
 <p class="article-text">
-  With sufficient time spent on initial setup and configuration, VSCode can work well as a primary editor for C++ projects.
-  It might not be as lightweight as Vim, but VSCode's flexible configuration model makes is relatively straightfoward
-  to work with.<br><br>
+  With enough time spent on setup and configuration, VSCode can work well as an IDE for C++ projects. VSCode's flexible
+  configuration model makes is straightfoward to work with.<br><br>
 
   These are some notes on one way of getting set up.
 </p>
 
 <h4 id="baseline">Baseline</h4>
 <p class="article-text">
-  Assuming you have the official
+  Assuming the official
   <a class="article-text-link" href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools">C/C++ VSCode extension</a>
-  installed, the very first thing you'll want to do is set the default include path in your global
-  <code class="article-text">settings.json</code>. If you have libraries on disk you use frequently enough to warrant
-  being visible to all of your projects (whether they're linked or not), this is the place to list them:
+  is installed, we first need to set the default include path in the global
+  <code class="article-text">settings.json</code>. If there are libraries on disk used frequently enough to warrant
+  being visible to all projects (whether they're linked or not), this is the place to list them:
 </p>
 
 <pre class="article-text"><code class="language-json">"C_Cpp.default.includePath": ["path-one", "path-two"]
 </code></pre>
 
 <p class="article-text">
-  For every C++ project you work on, you'll also want to create a workspace
+  For every C++ project worked on, we'll also want to create a workspace
   <code class="article-text">.vscode/c_cpp_properties.json</code> to store project specific configuration details such
   as the <code class="article-text">intellisenseMode</code>, <code class="article-text">includePath</code>,
   <code class="article-text">compilerPath</code> and <code class="article-text">cppStandard</code>.<br><br>
 
-  Make sure that each project's <code class="article-text">c_cpp_properties.json</code> includes the default
+  Each project's <code class="article-text">c_cpp_properties.json</code> should include the default
   <code class="article-text">includePath</code> defined in <code class="article-text">settings.json</code>. This way, the
   default path will be searched in addition to any project specific paths. Also ensure that the
   <code class="article-text">c_cpp_properties.json</code> configuration aligns perfectly with whatever tooling is being
-  used for the project. The <code class="article-text">intellisenseMode</code> needs to be spot on here, else VSCode may
+  used for the project. The <code class="article-text">intellisenseMode</code> needs to be spot on, else VSCode may
   give misdirected warnings about missing headers.
 </p>
 
@@ -65,22 +64,22 @@ toc_sticky: true
   impacts intellisense for the project in which it is included. By setting a default C/C++
   <code class="article-text">includePath</code> in a workspace or global <code class="article-text">settings.json</code>,
   and setting an <code class="article-text">includePath</code> in a project specific
-  <code class="article-text">c_cpp_properties.json</code> that points to this default, all you are doing is making
+  <code class="article-text">c_cpp_properties.json</code> that points to this default, all we are doing is making
   VSCode's intellisense aware of the existence of these default headers for that specific project.<br><br>
 
   If the <code class="article-text">includePath</code> entries in these configuration files were omitted, VSCode would
-  have no way to enforce intellisense in any meaningful sense. In such a case, warnings about missing symbols might get
+  have no way to enforce intellisense in any meaningful sense. In this case, warnings about missing symbols might get
   thrown, but projects may still compile. This is because most compilers perform their own predefined searches for headers
   during compilation.<br><br>
 
   Ultimately, the process of setting a sensible <code class="article-text">includePath</code> for C++ projects is to align
   VSCode's intellisense header search as closely as possible with the underlying compiler search, so that symbol resolution
-  reflects what the compiler is actually aware of.<br><br>
+  reflects what the compiler will be able to find.<br><br>
 
   Similarly, to get the compiler to find external libraries when <i>linking</i>, set up a
   <code class="article-text">.vscode/tasks.json</code> with an appropriately matching
-  <code class="article-text">includePath</code> entry, or do away with task based header resolution altogether and use
-  a dedicated build system such as CMake.
+  <code class="article-text">includePath</code> entry, or do away with task based header resolution and use a dedicated
+  build system such as CMake.
 </p>
 
 <h4 id="tooling">Integrating external tooling</h4>
