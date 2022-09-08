@@ -17,7 +17,7 @@ toc_sticky: true
 
 <div class="article-content-start">
   <p class="article-text">
-    <img class="article-text-image" src="/assets/images/vscode-cpp-2.png" alt="vscode-cpp-preview">
+    <img class="article-text-image" src="/assets/images/vscode-cpp.png" alt="vscode-cpp-preview">
     <span class="article-text-image-caption">
       <a class="article-text-link" href="https://code.visualstudio.com/docs/languages/cpp">Source: The Official VSCode C++ Documentation</a>.
     </span>
