@@ -63,7 +63,7 @@ $light-gray: mix(#fff, $gray, 50%) !default;
 $lighter-gray: mix(#fff, $gray, 90%) !default;
 $dark-masthead-text: #eaeaea !default;
 
-$background-color: #fff !default;
+$background-color: #fffdfc !default;
 $offwhite-background-color: rgb(253, 253, 253) !default;
 $code-background-color: #fafafa !default;
 $code-background-color-dark: $light-gray !default;
@@ -131,7 +131,7 @@ $navicon-link-color-hover: mix(#fff, $primary-color, 75%) !default;
 $navicon-cross-color: rgb(17, 17, 17) !default;
 $masthead-black: rgb(49, 49, 49);
 $search-black: black;
-$masthead-background: white;
+$masthead-background: $background-color !default;
 
 /* notices */
 $notice-background-mix: 80% !default;
