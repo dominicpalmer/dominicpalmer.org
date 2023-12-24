@@ -63,22 +63,22 @@ $light-gray: mix(#fff, $gray, 50%) !default;
 $lighter-gray: mix(#fff, $gray, 90%) !default;
 $dark-masthead-text: #eaeaea !default;
 
-$background-color: #fffdfc !default;
+$background-color: #f9f9f9 !default;
 $offwhite-background-color: rgb(253, 253, 253) !default;
 $code-background-color: #fafafa !default;
 $code-background-color-dark: $light-gray !default;
 $text-color: $dark-gray !default;
 $muted-text-color: mix(#fff, $text-color, 20%) !default;
-$border-color: $lighter-gray !default;
+$border-color: #d0d0d0 !default;
 $border-color-2: rgb(218, 218, 218) !default;
 $form-background-color: $lighter-gray !default;
 $footer-background-color: $lighter-gray !default;
-$page-content-divider-color: #eee !default;
+$page-content-divider-color: #959595 !default;
 $button-border-colour: #f2f3f3 !default;
-$light-form-background-color: #f0f1f1 !default;
+$light-form-background-color: #e8eaf0 !default;
 $terminal-text-color: rgb(60, 60, 60) !default;
 $landing-sentence-link-color: rgb(26, 26, 26) !default;
-$article-text-link-color: #00a48d !default;
+$article-text-link-color: #0559db !default;
 $code-background-colour: #eee !default;
 
 $primary-color: #6f777d !default;
@@ -131,7 +131,7 @@ $navicon-link-color-hover: mix(#fff, $primary-color, 75%) !default;
 $navicon-cross-color: rgb(17, 17, 17) !default;
 $masthead-black: rgb(49, 49, 49);
 $search-black: black;
-$masthead-background: $background-color !default;
+$masthead-background: #ececec !default;
 
 /* notices */
 $notice-background-mix: 80% !default;
@@ -169,7 +169,7 @@ $small: 600px !default;
 $medium: 768px !default;
 $medium-wide: 900px !default;
 $large: 1024px !default;
-$x-large: 1280px !default;
+$x-large: 1700px !default;
 $max-width: $x-large !default;
 
 /*

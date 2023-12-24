@@ -31,6 +31,9 @@ $linkedin-icon-color: #00a5f2 !default;
 $article-text-link-color:  #c2c0ff !default;
 $skilltag-background-color: #2f4c6a !default;
 
+$border-top: #51555d !default;
+$contact-form-border: #51555d !default;
+
 /*
   Page
 */
@@ -39,7 +42,7 @@ $skilltag-background-color: #2f4c6a !default;
 }
 
 .initial-content, .search-content {
-  border-top: 1px solid $masthead-background !important;
+  border-top: 1px solid $border-top !important;
   background: $background-color !important;
 }
 
@@ -341,6 +344,7 @@ $skilltag-background-color: #2f4c6a !default;
 */
 #contact-form {
   background-color: $masthead-background !important;
+  border: 1px solid $contact-form-border !important;
 }
 
 #contact-form-button {
