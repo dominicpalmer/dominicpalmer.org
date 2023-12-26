@@ -1,9 +1,5 @@
 {% if page.author_profile or layout.author_profile or page.sidebar %}
-  {% if page.url == "/contact/" %}
-    <div class="sidebar">
-  {% else %}
-    <div class="sidebar sticky">
-  {% endif %}
+  <div class="sidebar sticky">
   {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
   {% if page.sidebar %}
     {% for s in page.sidebar %}

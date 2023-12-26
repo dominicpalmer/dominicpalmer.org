@@ -28,6 +28,7 @@
     font-size: $type-size-6;
 
     @include breakpoint($large) {
+      position: fixed;
       float: right;
       width: calc(100% - #{$right-sidebar-width-narrow});
     }
@@ -520,6 +521,21 @@
   border: 1px solid $border-color;
   border-radius: $border-radius;
 
+  @include breakpoint($small) {
+    position: relative;
+    z-index: -1;
+  }
+
+  @include breakpoint($medium) {
+    position: relative;
+    z-index: -1;
+  }
+
+  @include breakpoint($medium-wide) {
+    position: relative;
+    z-index: -1;
+  }
+
   .nav__title {
     color: white;
     font-size: $type-size-5;
@@ -582,18 +598,18 @@
   Overrides
 */
 .navicon {
-  height: 1px !important;
+  height: 2px !important;
   margin: 0 0.75rem !important;
 
   &::before, &::after {
     background: $masthead-black;
-    height: 1px !important;
+    height: 2px !important;
   }
 }
 
 .greedy-nav__toggle:hover .navicon {
   background: $masthead-black;
-  height: 1px !important;
+  height: 2px !important;
 }
 
 .greedy-nav__toggle:hover.close .navicon {
