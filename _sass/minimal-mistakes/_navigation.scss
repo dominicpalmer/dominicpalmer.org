@@ -523,17 +523,22 @@
 
   @include breakpoint($small) {
     position: relative;
-    z-index: -1;
   }
 
   @include breakpoint($medium) {
     position: relative;
-    z-index: -1;
   }
 
   @include breakpoint($medium-wide) {
     position: relative;
-    z-index: -1;
+  }
+
+  @include breakpoint($large) {
+    margin-top: 106px;
+  }
+
+  @include breakpoint($x-large) {
+    margin-top: 106px;
   }
 
   .nav__title {

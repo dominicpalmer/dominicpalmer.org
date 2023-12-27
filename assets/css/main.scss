@@ -7,6 +7,18 @@
   line-height: 30%;
 }
 
+// Ensures anchor selection performs heading scroll with accurate offset
+html {
+  scroll-padding-top: 4rem;
+}
+
+.home-page {
+  background-image: url('/assets/images/wallpaper.jpg');
+  background-color: rgba(255, 255, 255, 0);
+  background-blend-mode: lighten;
+  background-position-y: -45px;
+}
+
 // Icon colours
 .splash-btn-github:hover {
   color: rgb(225, 103, 255);
@@ -45,6 +57,7 @@
 }
 
 .page__hero--overlay {
+  opacity: 0% !important;
   margin-bottom: 0.5em !important;
 }
 

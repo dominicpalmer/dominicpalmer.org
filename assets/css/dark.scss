@@ -14,7 +14,7 @@
 */
 $masthead-text: #eaeaea !default;
 $masthead-background: #1d212b !default;
-$page-content-divider-color: #393c44 !default;
+$page-content-divider-color: #50545e !default;
 $background-color: #252a34 !default;
 $navicon-color: $masthead-text !default;
 $navicon-cross-color: white !default;
@@ -42,8 +42,13 @@ $contact-form-border: #51555d !default;
 }
 
 .initial-content, .search-content {
-  border-top: 1px solid $border-top !important;
   background: $background-color !important;
+}
+
+.home-page {
+  background-image: url('/assets/images/wallpaper-dark.jpg') !important;
+  background-blend-mode: overlay !important;
+  background-size: cover !important;
 }
 
 .btn {
@@ -205,6 +210,7 @@ $contact-form-border: #51555d !default;
 }
 
 .page__hero--overlay {
+  opacity: 0% !important;
   margin-bottom: 0.5em !important;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/assets/images/splash.jpg') !important;
 
